@@ -1,0 +1,62 @@
+---
+import Meta from "@components/Meta.astro";
+import Navbar from "@components/sections/Navbar.astro";
+import FooterSection from "@components/sections/FooterSection.astro";
+import { SITE } from "@data/constants";
+import Stickybutton from "@/components/Stickybutton.astro";
+
+const { title = SITE.title + " | " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates", meta, structuredData, lang = "en" } = Astro.props;
+
+interface Props {
+  title?: string;
+  meta?: string;
+  structuredData?: object;
+  lang?: string;
+}
+---
+
+
+<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
+  <head>
+  <Meta meta={meta} structuredData={structuredData} />
+<title>{title}</title>
+    <script is:inline>
+      if (
+        localStorage.getItem("hs_theme") === "dark" 
+        (!("hs_theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <script>
+      import "@scripts/lenisSmoothScroll.js";
+    </script>
+  </head>
+  <body
+    class="bg-neutral-200 selection:bg-blue-600 selection:text-neutral-700 dark:bg-neutral-800"
+  >
+     <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <Navbar />
+      <main>
+        <slot />
+        <Stickybutton />
+      </main>
+      
+    </div>
+
+    
+    <FooterSection />
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </body>
+</html>
