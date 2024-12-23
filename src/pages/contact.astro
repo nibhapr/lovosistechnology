@@ -2,7 +2,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
 import ContactIconBlock from "@components/ui/blocks/ContactIconBlock.astro";
-const pageTitle: string = `Contact | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
+const pageTitle: string = `Contact | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
 const abtitle: string = "Contact us";
 import lovosis from '../assets/img/lovosis.jpg';
 import logo from '../assets/img/logo.png'
@@ -10,59 +10,8 @@ const absubTitle: string ="Have questions or want to discuss a project? Reach ou
 const NAME = "Lovosis Technology L.L.C U.A.E";
 const IMAGE = lovosis;
 const LOGO = logo
----
 
-<style>
-    .fadeInUp {
-    animation: fadeInUpAnimation;
-    animation-timeline: view();
-    }
-    @keyframes fadeInUpAnimation {
-        from {
-            opacity: 0.8;
-            transform: translateY(100px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }  
- 
-  .autoShow{
-      animation: autoShowAnimation both;
-      animation-timeline: view(70% 5%);
-  
-      }
-  
-  @keyframes autoShowAnimation{
-      from{
-          opacity: 0;
-          transform: translateY(200px) scale(0.3);
-      }to{
-          opacity: 1;
-          transform: translateY(0) scale(1);
-      }
-      }
-  
-  .fadeInRight {
-      animation: fadeInRightAnimation;
-      animation-timeline: view();
-      }
-  
-  @keyframes fadeInRightAnimation {
-          from {
-              opacity: 0;
-              transform: translateX(100px);
-          }
-          to {
-              opacity: 1;
-              transform: translateX(0);
-          }
-      }
-  </style>
-<MainLayout
-  title={pageTitle}
-  structuredData={{
+const structuredData={
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -227,9 +176,61 @@ const LOGO = logo
       }
     ]
     
-  }};
->
+  };
+
+---
+
+<style>
+    .fadeInUp {
+    animation: fadeInUpAnimation;
+    animation-timeline: view();
+    }
+    @keyframes fadeInUpAnimation {
+        from {
+            opacity: 0.8;
+            transform: translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }  
+ 
+  .autoShow{
+      animation: autoShowAnimation both;
+      animation-timeline: view(70% 5%);
   
+      }
+  
+  @keyframes autoShowAnimation{
+      from{
+          opacity: 0;
+          transform: translateY(200px) scale(0.3);
+      }to{
+          opacity: 1;
+          transform: translateY(0) scale(1);
+      }
+      }
+  
+  .fadeInRight {
+      animation: fadeInRightAnimation;
+      animation-timeline: view();
+      }
+  
+  @keyframes fadeInRightAnimation {
+          from {
+              opacity: 0;
+              transform: translateX(100px);
+          }
+          to {
+              opacity: 1;
+              transform: translateX(0);
+          }
+      }
+  </style>
+<MainLayout title={pageTitle} sd={structuredData}>
+  
+
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
 
     <div class="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20">

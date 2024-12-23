@@ -5,7 +5,7 @@ import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 
-const pageTitle: string = `toshiba | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
+const pageTitle: string = `toshiba | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
 
 
 
@@ -19,7 +19,21 @@ interface Props {
 
 const abtitle: string = "toshiba";
 const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution."
-
+const structuredData={
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/toshiba",
+    "url": "https://lovosis.com/toshiba",
+    "name": "toshiba | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
 ---
 
 <style>
@@ -104,23 +118,8 @@ const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-
 </style>
 
 
-<MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/toshiba",
-    "url": "https://lovosis.com/toshiba",
-    "name": "toshiba | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
-    },
-    "inLanguage": "en-US"
-  }}
+<MainLayout title={pageTitle} sd={structuredData}
+ 
 >
 
 

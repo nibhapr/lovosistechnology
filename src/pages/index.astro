@@ -15,7 +15,7 @@ import solution2 from "@images/fabrication.webp";
 import solution3 from "@images/it.webp";
 import lovosis from '../assets/img/lovosis.jpg';
 import { SITE } from "@data/constants";
-const pageTitle: string = `About | ${SITE.title + " - " + ", United Arab Emirates"}`;
+const pageTitle: string = `About | ${SITE.Title + " - " + ", United Arab Emirates"}`;
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -25,21 +25,19 @@ const avatarSrcs: Array<string> = [
 ];
 const NAME = "Lovosis Technology L.L.C U.A.E";
 const IMAGE = lovosis;
----
-<MainLayout  title={pageTitle}
- structuredData={{
+const structuredData={
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://lovosis.com/#organization",
       name: NAME,
-      url: SITE.url,
+      url: SITE.baseURL,
     },
     {
       "@type": "WebSite",
       "@id": "https://lovosis.com/#website",
-      url:SITE.url ,
+      url:SITE.baseURL ,
       name: NAME,
       publisher: { "@id": "https://lovosis.com/#organization" },
       inLanguage: "en-US",
@@ -59,7 +57,7 @@ const IMAGE = lovosis;
         {
           "@type": "ListItem",
           position: 1,
-          item: { "@id": SITE.url, name: "Home" },
+          item: { "@id": SITE.baseURL, name: "Home" },
         },
         
       ],
@@ -108,7 +106,10 @@ const IMAGE = lovosis;
       mainEntityOfPage: { "@id": "https://lovosis.com=/#webpage" },
     },
   ],
-}};
+};
+---
+<MainLayout  title={pageTitle} sd ={structuredData}
+
 >
   
   <HeroSection

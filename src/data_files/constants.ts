@@ -1,42 +1,54 @@
-import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "Lovosis Technology LLC ",
-  tagline:
-    "",
-  description:
-    "",
-  description_short:
-    "",
-  url: "https://lovosis.com/",
-  author: "Digiimpact",
-};
+	Title: "Top Wholesale Deals on UNV, Hikvision & Dahua Security Products",
+	baseURL:"https://lovosis.com" ,
+	canonical: "https://lovosis.com", 
+	description:
+		"Looking for wholesale prices on UNV, Hikvision, or Dahua security products? We offer top-rated surveillance equipment for businesses and resellers",
+	type: "website",
+	image: {
+		url: "https://lovosis.com/social.png",
+    		alt: "Lovosis Technology L.L.C U.A.E", 
+		width: 1200,
+		height: 630,
+	},
+	siteName: "Lovosis Technology U.A.E|Security system supplier",
+	openGraph: {
+		basic: {
+			title: "Top Wholesale Deals on UNV, Hikvision & Dahua Security Products",
+			type: "Website",
+			image: {
+				url: "https://lovosis.com/social.png", 
+				alt: "Lovosis Technology L.L.C U.A.E", 
+				width: 1200,
+				height: 630,
+			},
+		},
+		optional: {
+			siteName: "lovosis.com",
+			description:
+				"Looking for wholesale prices on UNV, Hikvision, or Dahua security products? We offer top-rated surveillance equipment for businesses and resellers",
+			video: {
+				url: "https://youtu.be/iXoD66f3-EI",
+				alt: "Lovosis Technology L.L.C U.A.E",
+				width: 1280,
+				height: 720,
+			},
+		},
+		article: {
+			publishedTime: "2024-06-24T15:30:00Z",
+      	author: "Digiimpact"
+		},
+	}, 
 
-export const SEO = {
-  title: SITE.title,
-  description: SITE.description,
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    inLanguage: "en-US",
-    "@id": SITE.url,
-    url: SITE.url,
-    name: SITE.title,
-    description: SITE.description,
-    isPartOf: {
-      "@type": "WebSite",
-      url: SITE.url,
-      name: SITE.title,
-      description: SITE.description,
-    },
-  },
-};
-
-export const OG = {
-  locale: "en_US",
-  type: "website",
-  url: SITE.url,
-  title: `${SITE.title}: : Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates`,
-  description: "Custom Fabrication & Surveillance Solution Provider In Dubai",
-  image: ogImageSrc,
+	twitter: {
+		card: "summary_large_image",
+		site: "lovosis.com",
+		creator: "Digiimpact",
+		title: "Top Wholesale Deals on UNV, Hikvision & Dahua Security Products",
+		description:
+			"Looking for wholesale prices on UNV, Hikvision, or Dahua security products? We offer top-rated surveillance equipment for businesses and resellers",
+		image: "https://lovosis.com/social.png",
+		imageAlt: "Lovosis Technology L.L.C U.A.E",
+	},
 };

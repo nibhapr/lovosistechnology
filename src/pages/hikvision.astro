@@ -5,7 +5,7 @@ import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 
-const pageTitle: string = `hikvision | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
+const pageTitle: string = `hikvision | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
 
 
 
@@ -19,7 +19,21 @@ interface Props {
 
 const abtitle: string = "hikvision";
 const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution."
-
+const structuredData={
+    "@context": "ttps://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/hikvision",
+    "url": "https://lovosis.com/hikvision",
+    "name": "Hikvision | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
 ---
 
 <style>
@@ -104,22 +118,8 @@ const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-
 
 
 <MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/hikvision",
-    "url": "https://lovosis.com/hikvision",
-    "name": "Hikvision | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
-    },
-    "inLanguage": "en-US"
-  }}
+  title={pageTitle} sd={structuredData}
+ 
 >
 
 

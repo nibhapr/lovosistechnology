@@ -5,7 +5,7 @@ import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 
-const pageTitle: string = `imou | ${SITE.title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
+const pageTitle: string = `imou | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
 
 
 
@@ -44,7 +44,21 @@ const cards = [
   },
 ];
 
-
+const structuredData={
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/dahua",
+    "url": "https://lovosis.com/dahua",
+    "name": "imou | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
 ---
 
 <style>
@@ -130,22 +144,8 @@ const cards = [
 
 
 <MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/dahua",
-    "url": "https://lovosis.com/dahua",
-    "name": "imou | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
-    },
-    "inLanguage": "en-US"
-  }}
+  title={pageTitle} sd={structuredData}
+ 
 >
 
 

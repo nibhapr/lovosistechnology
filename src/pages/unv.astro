@@ -3,7 +3,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
-const pageTitle: string = `unv | ${SITE.title + " - " + "Lovosis technology U.A.E"}`;
+const pageTitle: string = `unv | ${SITE.Title + " - " + "Lovosis technology U.A.E"}`;
 interface Props {
   title: string;
   subTitle?: string;
@@ -11,6 +11,21 @@ interface Props {
 }
 const abtitle: string = "unv";
 const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution."
+const structuredData={
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/dahua",
+    "url": "https://lovosis.com/dahua",
+    "name": "unv | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
 ---
 
 <style>
@@ -96,22 +111,8 @@ const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-
 
 
 <MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/dahua",
-    "url": "https://lovosis.com/dahua",
-    "name": "unv | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
-    },
-    "inLanguage": "en-US"
-  }}
+  title={pageTitle} sd={structuredData}
+ 
 >
 
 

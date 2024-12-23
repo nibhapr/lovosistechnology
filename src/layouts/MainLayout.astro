@@ -1,24 +1,91 @@
 ---
-import Meta from "@components/Meta.astro";
+import { SEO } from "astro-seo";
 import Navbar from "@components/sections/Navbar.astro";
 import FooterSection from "@components/sections/FooterSection.astro";
-import { SITE } from "@data/constants";
+import { SITE} from "@data/constants";
 import Stickybutton from "@/components/Stickybutton.astro";
 
-const { title = SITE.title + " | " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates", meta, structuredData, lang = "en" } = Astro.props;
-
-interface Props {
-  title?: string;
-  meta?: string;
-  structuredData?: object;
-  lang?: string;
+export interface Props {
+	title: string;
+	publishedTime?: string;
+	site?: string;
+	sd?: object;
+	ogTitle?: string;
+	siteName?: string;
+	description?: string;
+  lang?:string;
+	image?: {
+		url: string;
+		alt: string;
+	};
+	disableIndexing?: boolean;
 }
+
+const {
+	title,
+  lang="en",
+	siteName,
+	publishedTime,
+	description,
+	site,
+	sd,
+	image,
+	disableIndexing = false,
+} = Astro.props;
+
 ---
 
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
-  <Meta meta={meta} structuredData={structuredData} />
+    {
+			sd && (
+				<script
+					is:inline
+					type="application/ld+json"
+					set:html={JSON.stringify(sd)}
+				/>
+       
+			)
+		}
+   
+    <SEO
+    title={title ?? SITE.Title}
+    description={description ?? SITE.description}
+    noindex={disableIndexing}
+    nofollow={disableIndexing}
+    openGraph={{
+      basic: {
+        title: title ?? SITE.Title,
+        type: "website",
+       image: SITE.image.url
+      },
+      image: {
+        width: SITE.image.width,
+        height: SITE.image.height,
+        alt: image?.alt ?? SITE.openGraph.basic.image?.alt,
+      },
+      optional: {
+        siteName: siteName ?? SITE.openGraph.optional.siteName,
+        description: description ?? SITE.openGraph.optional.description,
+      },
+
+      article: {
+        publishedTime:
+          publishedTime ?? SITE.openGraph.article.publishedTime,
+      },
+    }}
+    twitter={{
+      card: "summary_large_image",
+      site: site ?? SITE.twitter.site,
+      creator: "Digiimpact",
+      title: title ?? SITE.twitter.title,
+      description: description ?? SITE.twitter.description,
+      image: image?.url ?? SITE.image?.url,
+      imageAlt: "Lovosis Technology L.L.C, U.A.E",
+    }}
+  />
+
 <title>{title}</title>
     <script is:inline>
       if (
@@ -36,7 +103,7 @@ interface Props {
     </script>
   </head>
   <body
-    class="bg-neutral-200 selection:bg-blue-600 selection:text-neutral-700 dark:bg-neutral-800"
+    class="bg-white selection:bg-blue-600 selection:text-neutral-700 dark:bg-neutral-800"
   >
      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <Navbar />
