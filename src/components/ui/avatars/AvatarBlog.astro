@@ -14,9 +14,11 @@ interface Props {
 <div class="flex-shrink-0">
   <Image
     class="size-[46px] rounded-full border-2 border-neutral-50"
-    src={blogEntry.data.authorImage}
+    src={blogEntry.data.authorImage.src}
     alt={blogEntry.data.authorImageAlt}
     draggable={"false"}
     format={"avif"}
+    height={60}
+    width={60}
   />
 </div>

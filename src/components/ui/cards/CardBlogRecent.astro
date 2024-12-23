@@ -20,11 +20,13 @@ interface Props {
     <div class="relative rounded-lg pt-[50%] sm:pt-[100%]">
       <Image
         class="absolute start-0 top-0 size-full rounded-xl object-cover"
-        src={blogEntry.data.cardImage}
+        src={blogEntry.data.cardImage.src}
         alt={blogEntry.data.cardImageAlt}
         draggable={"false"}
         loading={"eager"}
         format={"avif"}
+        height={80}
+        width={80}
       />
     </div>
   </div>

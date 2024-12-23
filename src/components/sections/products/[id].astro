@@ -7,7 +7,7 @@ import About from "@components/sections/landing/About.astro"
 import productsData from './new.json'; 
 
 
-const pageTitle: string = ` | ${SITE.title}`;
+const pageTitle: string = ` | ${SITE.Title}`;
 
 // Define the Product type
 type Product = {
@@ -38,7 +38,21 @@ if (id) {
   const products: Product[] = productsData.products;
   product = products.find((p) => p.id === productId);
 }
-
+const structuredData={
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/about",
+    "url": "https://lovosis.com/about",
+    "name": "About | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
 
 ---
 
@@ -191,22 +205,8 @@ if (id) {
 
 
 <MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/about",
-    "url": "https://lovosis.com/about",
-    "name": "About | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
-    },
-    "inLanguage": "en-US"
-  }}
+  title={pageTitle} sd = {structuredData}
+ 
 >
 
 
