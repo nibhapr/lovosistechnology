@@ -7,13 +7,9 @@ import faviconSrc from "@images/icon.png";
 const defaultProps = {
   meta: SITE.description,
  };
-
-
-
 const {
   meta = defaultProps.meta,
 } = Astro.props;
-
 const URL = `${Astro.site}`;
 const author = SITE.openGraph.article.author;
 const canonical = Astro.url.href;
@@ -27,19 +23,16 @@ const socialImageRes = await getImage({
 const socialImage = Astro.url.origin + socialImageRes.src; 
 const languages: { [key: string]: string } = {
   en: "en",
-  
-};
+ };
 
 function createHref(lang: string, prefix: string, path: string): string {
   const hasPrefix = path.startsWith(`/${prefix}/`);
-
   const basePath = hasPrefix ? path : `/${prefix}${path}`;
   const normalizedBasePath = basePath.replace(/\/\/+/g, "/");
   return `${URL.slice(0, -1)}${normalizedBasePath}`;
 }
 
 const fullPath: string = Astro.url.pathname;
-
 const alternateLanguageLinks: string = Object.entries(languages)
   .map(([lang, prefix]: [string, string]) => {
     const basePath: string =
@@ -50,8 +43,6 @@ const alternateLanguageLinks: string = Object.entries(languages)
     return `<link rel="alternate" hreflang="${lang}" href="${href}" />`;
   })
   .join("\n");
-
-
 const faviconSvg = await getImage({
   src: faviconSvgSrc,
   format: "svg",
@@ -94,4 +85,4 @@ const appleTouchIcon = await getImage({
 <meta name="mobile-web-app-capable" content="yes" />
 <link href={appleTouchIcon.src} rel="apple-touch-icon" />
 <link href={appleTouchIcon.src} rel="shortcut icon" />
-<meta name="theme-color" content="#facc15" />
+<meta name="theme-color" content="#1589FF" />
