@@ -4,11 +4,13 @@ import Navbar from "@components/sections/Navbar.astro";
 import FooterSection from "@components/sections/FooterSection.astro";
 import { SITE} from "@data/constants";
 import Stickybutton from "@/components/Stickybutton.astro";
+import Meta from "@components/Meta.astro";
 
 export interface Props {
 	title: string;
 	publishedTime?: string;
 	site?: string;
+  meta?:string;
 	sd?: object;
 	ogTitle?: string;
 	siteName?: string;
@@ -23,6 +25,7 @@ export interface Props {
 
 const {
 	title,
+  meta,
   lang="en",
 	siteName,
 	publishedTime,
@@ -38,6 +41,7 @@ const {
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
+
     {
 			sd && (
 				<script
@@ -85,7 +89,7 @@ const {
       imageAlt: "Lovosis Technology L.L.C, U.A.E",
     }}
   />
-
+<Meta meta={meta}/>
 <title>{title}</title>
     <script is:inline>
       if (
