@@ -7,6 +7,7 @@ const pageTitle: string = `INTERSEC 2025 | ${SITE.Title + " - " + "Uniview Techn
 const title: string = "Uniview Technologies Ltd. & Lovosis Technology L.L.C at Intersec Dubai 2025";
 const subTitle: string = "Uniview Technologies Ltd. & Lovosis Technology L.L.C  are proud to showcase the latest advancements in security solutions at Intersec Dubai 2025. Visit stal No:SA-E30  to explore innovative products and technologies designed to enhance safety and efficiency in security systems.";
 const structuredData={
+"@graph": [{
 "@context": "https://schema.org",
   "@type": "Event",
   "name": "Intersec 2025",
@@ -59,8 +60,40 @@ const structuredData={
     "Cybersecurity Expo",
     "Safety Solutions"
   ]
+  },
+  {
+      "@type": "VideoObject",
+      "name": "Intersec 2025 Overview",
+      "description": "This video provides an overview of the Intersec 2025 event, showcasing highlights and what attendees can expect from the world's leading trade fair for security, safety, and fire protection.",
+      "thumbnailUrl": "https://lovosis.com/pictures/gitex234.png",  
+      "contentUrl": "https://www.youtube.com/embed/MeB5Xgx8YNA?si=Qi4WuwGoDpBFUBqC",  
+      "uploadDate": "2024-12-24",
+      "duration": "PT0M25S", 
+      "publisher": {
+        "@type": "Organization",
+        "name": "Intersec Organizers",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lovosis.com/pictures/logo.png"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Lovosis Technology L.L.C",
+        "url": "https://lovosis.com"
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": {
+          "@type": "SocialMediaPosting",
+          "name": "LikeAction"
+        },
+        "userInteractionCount": 1000  
+      }
+    }
+]
 }
-  
+
 ---
 
 <style>
