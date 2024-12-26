@@ -1,39 +1,71 @@
 ---
-// Importing necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
-
-const pageTitle: string = `hikvision | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
-
-
-
-
-// Define TypeScript interface for props
+const pageTitle: string = `hikvision | ${SITE.Title + " - " + "Wholesale Hikvision Cameras Distributor | Best Prices for Security Solutions"}`;
 interface Props {
   title: string;
-  subTitle?: string;
+  descriptions?: string;
   benefits?: Array<string>;
 }
-
-const abtitle: string = "hikvision";
-const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution."
+const descriptions: string ="Looking for the best deals on Hikvision cameras? We are a trusted wholesale distributor of Hikvision CCTV cameras, offering top-quality security solutions at unbeatable prices. Explore our wide range of bulk pricing options for residential, commercial, and industrial needs. Contact us for quotes today"
 const structuredData={
-    "@context": "ttps://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/hikvision",
-    "url": "https://lovosis.com/hikvision",
-    "name": "Hikvision | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+  
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lovosis Technology L.L.C",
+  "url": "https://www.lovosis.com",
+  "logo": "https://lovosis.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+971 50 9162488",
+    "contactType": "Sales",
+    "areaServed": "AE",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
+    "addressLocality": "Dubai",
+    "addressRegion": "United Arab Emirates",
+    "postalCode": "123421",
+    "addressCountry": "AE"
+  },
+  "sameAs": [
+    "https://www.instagram.com/_lovosis_group_of_companies_/",
+    "https://in.linkedin.com/company/lovosis-technology-llc"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "Hikvision",
+    "url": "https://www.hikvision.com",
+    "logo": "https://lovosis.com/pictures/Brand%20Logo/logo.png"
+  },
+  "product": {
+    "@type": "Product",
+    "name": "Hikvision CCTV Camera",
+    "image": "https://lovosis.com/pictures/hik.png",
+    "description": {descriptions},
+    "brand": {
+      "@type": "Brand",
+      "name": "Hikvision"
     },
-    "inLanguage": "en-US"
+    "offers": {
+      "@type": "Offer",
+      "url": "https://lovosis.com/hikvision",
+      "priceCurrency": "AED",
+      "price": "250",
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "UAE"
+      },
+      "priceValidUntil": "2024-12-31"
+    }
   }
+}
+
+  
 ---
 
 <style>
@@ -118,7 +150,7 @@ const structuredData={
 
 
 <MainLayout
-  title={pageTitle} sd={structuredData}
+  title={pageTitle} sd={structuredData} description={descriptions}
  
 >
 

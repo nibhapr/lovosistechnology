@@ -1,64 +1,96 @@
 ---
-// Importing necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
-import { SITE } from "@data/constants";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
-
-const pageTitle: string = `imou | ${SITE.Title + " - " + "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates"}`;
-
-
-
-
-// Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
+  description?: string;
   benefits?: Array<string>;
 }
 
-const abtitle: string = "imou";
-const absubTitle: string ="Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution."
+const title: string = "Buy Imou CCTV Cameras in Bulk | Wholesale Distributor for Security Systems";
+const description: string ="Looking for affordable and high-quality Imou cameras? We are a trusted wholesale distributor of Imou CCTV cameras, offering smart security solutions at unbeatable prices. Explore our bulk pricing options for residential, commercial, and industrial needs. Contact us for a quote today!"
 
 
 const cards = [
   {
     title: "NVR",
     link: "https://imou-dubai.com/product-category/imou-nvr/",
-    bgImage: "url('pictures/nvr-imou.webp')", // Replace with actual image URLs
+    bgImage: "url('pictures/nvr-imou.webp')", 
   },
   {
     title: "Home Security",
     link: "https://imou-dubai.com/product-category/imou-home-security/",
-    bgImage: "url('pictures/home-imou.webp')", // Replace with actual image URLs
+    bgImage: "url('pictures/home-imou.webp')",
   },
   {
     title: "Cameras",
     link: "https://imou-dubai.com/product-category/imou-cameras/",
-    bgImage: "url('pictures/ip-imou.webp')", // Replace with actual image URLs
+    bgImage: "url('pictures/ip-imou.webp')", 
   },
   {
     title: "Accessories",
     link: "https://imou-dubai.com/product-category/imou-accessories/",
-    bgImage: "url('pictures/acc-imou.webp')", // Replace with actual image URLs
+    bgImage: "url('pictures/acc-imou.webp')", 
   },
 ];
 
 const structuredData={
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://lovosis.com/dahua",
-    "url": "https://lovosis.com/dahua",
-    "name": "imou | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of top-quality Surveillance & IT Solution. Learn about our commitment to excellence in the UAE construction industry.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://lovosis.com",
-      "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+  
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lovosis Technology L.L.C",
+  "url": "https://www.lovosis.com",
+  "logo": "https://lovosis.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+971 50 9162488",
+    "contactType": "Sales",
+    "areaServed": "AE",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
+    "addressLocality": "Dubai",
+    "addressRegion": "United Arab Emirates",
+    "postalCode": "123421",
+    "addressCountry": "AE"
+  },
+  "sameAs": [
+    "https://www.instagram.com/_lovosis_group_of_companies_/",
+    "https://in.linkedin.com/company/lovosis-technology-llc"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "Imou",
+    "url": "https://www.imou.com",
+    "logo": "https://lovosis.com/pictures/Brand%20Logo/Imou.png"
+  },
+  "product": {
+    "@type": "Product",
+    "name": "Imou CCTV Camera",
+    "image": "https://lovosis.com/pictures/imou.png",
+    "description": {description},
+    "brand": {
+      "@type": "Brand",
+      "name": "Imou"
     },
-    "inLanguage": "en-US"
+    "offers": {
+      "@type": "Offer",
+      "url": "https://lovosis.com/imou",
+      "priceCurrency": "AED",
+      "price": "250",
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "UAE"
+      },
+      "priceValidUntil": "2024-12-31"
+    }
   }
+}
+
 ---
 
 <style>
@@ -144,7 +176,7 @@ const structuredData={
 
 
 <MainLayout
-  title={pageTitle} sd={structuredData}
+  title={title} sd={structuredData} description ={description}
  
 >
 
