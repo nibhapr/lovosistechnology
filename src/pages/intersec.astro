@@ -1,7 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
-import socialimage from "@images/social.webp";
+
 
 const pageTitle: string = `INTERSEC 2025 | ${SITE.Title + " - " + "Uniview Technologies Ltd. & Lovosis Technology L.L.C at Intersec Dubai 2025: Innovating Security Solutions"}`;
 const title: string = "Uniview Technologies Ltd. & Lovosis Technology L.L.C at Intersec Dubai 2025";
@@ -28,7 +28,12 @@ const structuredData={
       "addressCountry": "AE"
     }
   },
-  "image": "https://lovosis.com/images/social.webp",
+  "image": [
+        "https://lovosis.com/pictures/social.webp",
+        "https://lovosis.com/pictures/social1.png",
+        "https://lovosis.com/pictures/social2.png",
+       ],
+
   "organizer": {
     "@type": "Organization",
     "name": "Intersec Organizers",
