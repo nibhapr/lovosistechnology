@@ -18,7 +18,7 @@ importers:
         specifier: ^3.1.6
         version: 3.1.6
       '@astrojs/starlight':
-        specifier: ^0.24.4
+        specifier: ^0.24.5
         version: 0.24.5(astro@4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4))
       '@astrojs/starlight-tailwind':
         specifier: ^2.0.3
@@ -29,6 +29,9 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.7.2
         version: 7.8.0(astro@4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4))(react@18.3.1)
+      '@digi4care/astro-google-tagmanager':
+        specifier: ^1.4.0
+        version: 1.4.0(astro@4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4))
       '@preline/accordion':
         specifier: ^2.4.1
         version: 2.4.1
@@ -56,6 +59,9 @@ importers:
       astro-compressor:
         specifier: ^0.4.1
         version: 0.4.1
+      astro-seo:
+        specifier: ^0.8.4
+        version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
@@ -118,6 +124,12 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@astrojs/check@0.5.10':
+    resolution: {integrity: sha512-vliHXM9cu/viGeKiksUM4mXfO816ohWtawTl2ADPgTsd4nUMjFiyAl7xFZhF34yy4hq4qf7jvK1F2PlR3b5I5w==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
 
   '@astrojs/check@0.7.0':
     resolution: {integrity: sha512-UTqwOeKNu9IYZmJXEeWnQuTdSd/pX58Hl4TUARsMlT97SVDL//kLBE4T/ctxRz6J573N87oE5ddtW/uOOnQTug==}
@@ -310,6 +322,11 @@ packages:
 
   '@darkroom.engineering/tempus@0.0.46':
     resolution: {integrity: sha512-s5vav3KMHYezvUCl4ee5epg0oimF6M8C9gAaKxFnFaTvX2q3ywFDryIv6XLd0mRFUt3S1uHDJqKaiEcs2ZVSvw==}
+
+  '@digi4care/astro-google-tagmanager@1.4.0':
+    resolution: {integrity: sha512-z+G54j9CHf33xh1E1zNYMUlcajMy4C0HS7QrZloXN/cfEwFJayQEnoRmji+u3KfxlaHLPXvv6z6v7yfLXcCPXQ==}
+    peerDependencies:
+      astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -1001,6 +1018,9 @@ packages:
     resolution: {integrity: sha512-1U4KrvFuodaCV3z4I1bIR16SdhQlPkolGsYTtiANxPZUVv/KitGSCTjzksrkPonn1XuwVqvnwmUUVzTLWngnBA==}
     peerDependencies:
       astro: ^4.0.0-beta || ^3.3.0
+
+  astro-seo@0.8.4:
+    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
   astro-vtbot@1.8.8:
     resolution: {integrity: sha512-oa+8CFgxrWz2qW1OhLaHZxe/GMPOrskKv2/wQOtaeYSDvM721wGmqyWlwdUNbya53GC03pfUSJ4Fscu1RFktPg==}
@@ -2991,6 +3011,18 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@astrojs/check@0.5.10(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
+    dependencies:
+      '@astrojs/language-server': 2.14.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      kleur: 4.1.5
+      typescript: 5.5.4
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+
   '@astrojs/check@0.7.0(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
     dependencies:
       '@astrojs/language-server': 2.14.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
@@ -3322,6 +3354,10 @@ snapshots:
   '@ctrl/tinycolor@4.1.0': {}
 
   '@darkroom.engineering/tempus@0.0.46': {}
+
+  '@digi4care/astro-google-tagmanager@1.4.0(astro@4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4))':
+    dependencies:
+      astro: 4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4)
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
@@ -3956,6 +3992,14 @@ snapshots:
     dependencies:
       astro: 4.15.1(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4)
       rehype-expressive-code: 0.35.6
+
+  astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4):
+    dependencies:
+      '@astrojs/check': 0.5.10(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
 
   astro-vtbot@1.8.8:
     dependencies:

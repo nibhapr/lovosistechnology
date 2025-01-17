@@ -5,7 +5,7 @@ import FooterSection from "@components/sections/FooterSection.astro";
 import { SITE} from "@data/constants";
 import Stickybutton from "@/components/Stickybutton.astro";
 import Meta from "@components/Meta.astro";
-import { GoogleTagmanager, GoogleTagmanagerNoscript, SiteVerification } from '@digi4care/astro-google-tagmanager';
+
 export interface Props {
 	title: string;
 	publishedTime?: string;
@@ -41,8 +41,7 @@ const {
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
-    <SiteVerification id="Yae4dCOLT5Tz1rVB4bPRG0iMjfa6itG2P5VmiArxWi8" />
-    <GoogleTagmanager id="G-M624Q6H6KL" domain="https://lovosis.com" container="custom-container.js" />
+  
 
     {
 			sd && (
@@ -112,7 +111,7 @@ const {
     class="bg-white selection:bg-blue-600 selection:text-neutral-700 dark:bg-neutral-800"
   >
      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-      <GoogleTagmanagerNoscript id="G-M624Q6H6KL" domain="https://lovosis.com" />
+   
       <Navbar />
       <main>
         <slot />

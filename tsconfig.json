@@ -1,10 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
+      "@astrojs/*": ["node_modules/@astrojs/*"],
       "@content/*": ["src/content/*"],
       "@data/*": ["src/data_files/*"],
       "@images/*": ["src/images/*"],
