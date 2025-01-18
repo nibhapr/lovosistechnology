@@ -1,0 +1,310 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Dahua Technology Co., Ltd & Lovosis Technology L.L.C Diamond Partner Agreement Dubai 2025 | ${SITE.Title}`;
+const title: string =
+    "Dahua Technology Co., Ltd & Lovosis Technology L.L.C Diamond Partner Agreement Dubai 2025";
+const subTitle: string =
+    "Join us for the prestigious Diamond Partner Agreement signing ceremony between Lovosis Technology L.L.C and Dahua Technology Co., Ltd, marking a significant milestone in delivering premium security solutions across the UAE market.";
+const description: string =
+    "Witness the official Diamond Partner Agreement signing ceremony as Lovosis Technology L.L.C becomes Dahua Technology's Diamond Partner in Dubai, strengthening our position as a leading security solutions provider in the UAE market for 2025.";
+
+const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Event",
+            name: title,
+            description: description,
+            startDate: "2024-03-28T14:00:00+04:00",
+            endDate: "2024-03-28T16:00:00+04:00",
+            eventAttendanceMode:
+                "https://schema.org/OfflineEventAttendanceMode",
+            eventStatus: "https://schema.org/EventScheduled",
+            location: {
+                "@type": "Place",
+                name: "Lovosis Technology L.L.C Head Office",
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress:
+                        "Baghlaf Building Showroom No.5, Satellite Market Naif Deira",
+                    addressLocality: "Dubai",
+                    addressRegion: "Dubai",
+                    postalCode: "00000",
+                    addressCountry: "AE",
+                },
+            },
+            image: [
+                "https://lovosis.com/pictures/dahua-partner.jpg",
+                "https://lovosis.com/pictures/social1.png",
+                "https://lovosis.com/pictures/social2.png",
+            ],
+            organizer: {
+                "@type": "Organization",
+                name: "Lovosis Technology L.L.C",
+                url: "https://lovosis.com",
+                logo: "https://lovosis.com/pictures/lovosis-logo.png",
+                description:
+                    "Leading security solutions provider in Dubai, UAE",
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress:
+                        "Baghlaf Building Showroom No.5, Satellite Market Naif Deira",
+                    addressLocality: "Dubai",
+                    addressRegion: "Dubai",
+                    addressCountry: "AE",
+                },
+            },
+            performer: {
+                "@type": "Organization",
+                name: "Dahua Technology",
+                url: "https://www.dahuasecurity.com",
+                logo: "https://lovosis.com/pictures/dahua-logo.png",
+            },
+            offers: {
+                "@type": "Offer",
+                url: "https://lovosis.com/contacts",
+                price: "0",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                validFrom: "2024-03-01T00:00:00+04:00",
+            },
+            audience: {
+                "@type": "Audience",
+                audienceType:
+                    "Security Professionals, System Integrators, Security Consultants",
+            },
+        },
+        {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    item: {
+                        "@id": "https://lovosis.com",
+                        name: "Home",
+                    },
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    item: {
+                        "@id": "https://lovosis.com/events",
+                        name: "Events",
+                    },
+                },
+                {
+                    "@type": "ListItem",
+                    position: 3,
+                    item: {
+                        "@id": "https://lovosis.com/dahua-diamond-partner-agreement-2025",
+                        name: "Dahua Diamond Partner Agreement 2025",
+                    },
+                },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://lovosis.com/dahua-diamond-partner-agreement-2025",
+            url: "https://lovosis.com/dahua-diamond-partner-agreement-2025",
+            name: pageTitle,
+            description: description,
+            publisher: {
+                "@type": "Organization",
+                name: "Lovosis Technology L.L.C",
+                logo: {
+                    "@type": "ImageObject",
+                    url: "https://lovosis.com/pictures/lovosis-logo.png",
+                },
+            },
+            inLanguage: "en-US",
+            isPartOf: {
+                "@type": "WebSite",
+                name: "Lovosis Technology L.L.C",
+                url: "https://lovosis.com",
+            },
+        },
+    ],
+};
+---
+
+<style>
+    .autoShow {
+        animation: autoShowAnimation both;
+        animation-timeline: view(70% 5%);
+    }
+
+    @keyframes autoShowAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(200px) scale(0.3);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .fadeInRight {
+        animation: fadeInRightAnimation;
+        animation-timeline: view();
+    }
+
+    @keyframes fadeInRightAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<MainLayout title={pageTitle} description={description} sd={structuredData}>
+    <main class="bg-white dark:bg-neutral-900">
+        <section
+            class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+        >
+            <div
+                class="mb-20 rounded-2xl bg-white p-5 text-center dark:bg-neutral-500 md:p-12"
+            >
+                <h1
+                    class="animate-fade-in-left text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-6xl md:leading-tight"
+                >
+                    {title}
+                </h1>
+                <p
+                    class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200"
+                >
+                    {subTitle}
+                </p>
+                <div class="video-container mt-8">
+                    <iframe
+                        src="https://www.youtube.com/embed/MeB5Xgx8YNA?si=Qi4WuwGoDpBFUBqC"
+                        title="Dahua Diamond Partner Agreement 2025"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        style="border: 0;"></iframe>
+                </div>
+            </div>
+
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+                    <div class="relative">
+                        <img
+                            src="/pictures/dahua-partner.jpg"
+                            alt="Dahua Diamond Partnership Ceremony"
+                            class="w-full rounded-xl shadow-lg"
+                        />
+                    </div>
+                    <div class="space-y-4">
+                        <h2
+                            class="text-3xl font-bold text-neutral-800 dark:text-neutral-100 md:text-4xl"
+                        >
+                            Empowering Security Solutions with Dahua Partnership
+                        </h2>
+                        <p
+                            class="text-lg text-neutral-600 dark:text-neutral-300"
+                        >
+                            Lovosis Technology L.L.C is proud to announce our
+                            Diamond Partnership with Dahua Technology, a global
+                            leader in video-centric smart IoT solutions. This
+                            prestigious partnership enables us to provide
+                            enhanced security solutions, premium support, and
+                            exclusive access to Dahua's latest innovations. Our
+                            commitment to excellence in security technology is
+                            strengthened through this collaboration, allowing us
+                            to better serve our clients across the UAE with
+                            cutting-edge surveillance solutions and expert
+                            technical support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-20 mt-32 rounded-2xl text-center">
+                <h1
+                    class="animate-fade-in-left text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-4xl md:leading-tight"
+                >
+                    Exclusive Dahua Product Portfolio
+                </h1>
+            </div>
+
+            <div class="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-1">
+                <ul
+                    id="cards"
+                    class="grid list-none grid-cols-1 grid-rows-4 gap-4"
+                >
+                    {
+                        [
+                            {
+                                title: "AI-Powered Security Cameras",
+                                description:
+                                    "Advanced surveillance cameras featuring artificial intelligence capabilities for smart detection and analytics",
+                                image: "/pictures/dahua-cameras.jpg",
+                            },
+                            {
+                                title: "Smart Storage Solutions",
+                                description:
+                                    "Enterprise-level storage systems designed for 24/7 surveillance operations with enhanced reliability",
+                                image: "/pictures/dahua-storage.jpg",
+                            },
+                            {
+                                title: "Video Management Systems",
+                                description:
+                                    "Comprehensive VMS solutions for efficient monitoring and management of security infrastructure",
+                                image: "/pictures/dahua-vms.jpg",
+                            },
+                            {
+                                title: "Access Control Systems",
+                                description:
+                                    "Integrated access control solutions for enhanced security management and visitor tracking",
+                                image: "/pictures/dahua-access.jpg",
+                            },
+                        ].map((item) => (
+                            <li class="card sticky top-32 cursor-pointer rounded-lg bg-white pt-4 shadow-xl transition-all duration-300 dark:bg-neutral-600">
+                                <div class="card__content relative grid grid-cols-1 gap-1 rounded-lg p-5 text-left md:grid-cols-2">
+                                    <div>
+                                        <h2 class="text-4xl font-light dark:text-neutral-200">
+                                            {item.title}
+                                        </h2>
+                                        <p class="text-base font-light leading-normal dark:text-neutral-300">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                    <figure class="overflow-hidden">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            class="h-full w-full object-contain"
+                                        />
+                                    </figure>
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </section>
+    </main>
+</MainLayout>

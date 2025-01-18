@@ -1,0 +1,270 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `INTERSEC 2025 | ${SITE.Title + " - " + "Uniview Technologies Ltd. & Lovosis Technology L.L.C at Intersec Dubai 2025: Innovating Security Solutions"}`;
+const title: string =
+  "Uniview Technologies Ltd. & Lovosis Technology L.L.C at Intersec Dubai 2025";
+const subTitle: string =
+  "Uniview Technologies Ltd. & Lovosis Technology L.L.C  are proud to showcase the latest advancements in security solutions at Intersec Dubai 2025. Visit stal No:SA-E30  to explore innovative products and technologies designed to enhance safety and efficiency in security systems.";
+const structuredData = {
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: "Intersec 2025",
+      description:
+        "Intersec 2025, the 26th edition of the world's leading trade fair for security, safety, and fire protection, will showcase the latest innovations and technologies in the industry.",
+      startDate: "2025-01-14T10:00:00+04:00",
+      endDate: "2025-01-16T17:00:00+04:00",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      location: {
+        "@type": "Place",
+        name: "Dubai World Trade Centre",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Sheikh Zayed Road",
+          addressLocality: "Dubai",
+          addressRegion: "Dubai",
+          postalCode: "00000",
+          addressCountry: "AE",
+        },
+      },
+      image: [
+        "https://lovosis.com/pictures/social.webp",
+        "https://lovosis.com/pictures/social1.png",
+        "https://lovosis.com/pictures/social2.png",
+      ],
+
+      organizer: {
+        "@type": "Organization",
+        name: "Intersec Organizers",
+        url: "https://intersec.ae.messefrankfurt.com",
+      },
+      performer: {
+        "@type": "PerformingGroup",
+        name: "Lovosis Technology L.L.C,Leading Security, Safety, and Fire Protection Experts",
+      },
+      offers: {
+        "@type": "Offer",
+        url: "https://lovosis.com/contacts",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        validFrom: "2024-12-01T00:00:00+04:00",
+      },
+      audience: {
+        "@type": "Audience",
+        audienceType:
+          "Security Professionals, Fire Safety Experts, Cybersecurity Consultants",
+      },
+      keywords: [
+        "Intersec 2025",
+        "Security Trade Fair",
+        "Lovosis Technology L.L.C",
+        "Fire Protection",
+        "Cybersecurity Expo",
+        "Safety Solutions",
+      ],
+    },
+    {
+      "@type": "VideoObject",
+      name: "Intersec 2025 Overview",
+      description:
+        "This video provides an overview of the Intersec 2025 event, showcasing highlights and what attendees can expect from the world's leading trade fair for security, safety, and fire protection.",
+      thumbnailUrl: "https://lovosis.com/pictures/gitex234.png",
+      contentUrl:
+        "https://www.youtube.com/embed/MeB5Xgx8YNA?si=Qi4WuwGoDpBFUBqC",
+      uploadDate: "2024-12-24T00:00:00+00:00",
+      duration: "PT0M25S",
+      publisher: {
+        "@type": "Organization",
+        name: "Intersec Organizers",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://lovosis.com/pictures/logo.png",
+        },
+      },
+      author: {
+        "@type": "Person",
+        name: "Lovosis Technology L.L.C",
+        url: "https://lovosis.com",
+      },
+    },
+  ],
+};
+---
+
+<style>
+  .autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+
+  @keyframes autoShowAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(200px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .fadeInRight {
+    animation: fadeInRightAnimation;
+    animation-timeline: view();
+  }
+
+  @keyframes fadeInRightAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<MainLayout title={pageTitle} sd={structuredData}>
+  <main class="bg-white dark:bg-neutral-900">
+    <section
+      class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+    >
+      <div
+        class="mb-20 rounded-2xl bg-white p-5 text-center dark:bg-neutral-500 md:p-12"
+      >
+        <h1
+          class="animate-fade-in-left text-balance text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-6xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
+          {subTitle}
+        </p>
+        <div class="video-container mt-8">
+          <iframe
+            src="https://www.youtube.com/embed/MeB5Xgx8YNA?si=Qi4WuwGoDpBFUBqC"
+            title="INTERSEC 2025"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <div class="relative">
+            <img
+              src="/pictures/gitex234.png"
+              alt="Cybersecurity visualization with shield"
+              class="w-full rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="space-y-4">
+            <h2
+              class="text-3xl font-bold text-neutral-800 dark:text-neutral-100 md:text-4xl"
+            >
+              Empowering Businesses with Lovosis Technology L.L.C
+            </h2>
+            <p class="text-lg text-neutral-600 dark:text-neutral-300">
+              Uniview Technologies Ltd. and Lovosis Technology L.L.C. are
+              excited to present their cutting-edge security solutions at
+              Intersec Dubai 2025, from January 14-16 at the Dubai World Trade
+              Center. Visit us at Stand No: SA-E30 to discover the latest
+              innovations in video surveillance, access control, and security
+              management systems. Our products are designed to elevate safety,
+              efficiency, and performance in both commercial and industrial
+              environments. Don’t miss the opportunity to explore advanced
+              technologies that redefine security standards. Join us for a
+              glimpse into the future of security!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 mt-32 rounded-2xl text-center">
+        <h1
+          class="animate-fade-in-left text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-4xl md:leading-tight"
+        >
+          Explore our Latest products
+        </h1>
+      </div>
+
+      <div class="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-1">
+        <ul id="cards" class="grid list-none grid-cols-1 grid-rows-4 gap-4">
+          {
+            [
+              {
+                title: "ColorHunter 2.0",
+                description:
+                  "An advanced low-light imaging technology that delivers vivid, full-color images even in near-total darkness, enhancing nighttime surveillance capabilities",
+                image: "/pictures/colorhunter3.png",
+              },
+              {
+                title: "MultiView Series Cameras",
+                description:
+                  "Cameras capable of providing multiple views from a single device, reducing installation costs and improving coverage efficiency",
+                image: "/pictures/multyview.png",
+              },
+              {
+                title: "AcuSearch",
+                description:
+                  "A powerful search technology that enables quick retrieval of specific video footage using intelligent algorithms, streamlining incident investigations.",
+                image: "/pictures/acusearch.png",
+              },
+
+              {
+                title: "Video Intercom Systems",
+                description:
+                  "Comprehensive video intercom devices, including indoor stations and door stations, designed to enhance security and communication in residential and commercial settings.",
+
+                image: "/pictures/videodoor.jpg",
+              },
+            ].map((item) => (
+              <li class="card sticky top-32 cursor-pointer rounded-lg bg-white pt-4 shadow-xl transition-all duration-300 dark:bg-neutral-600">
+                <div class="card__content relative grid grid-cols-1 gap-1 rounded-lg p-5 text-left md:grid-cols-2">
+                  <div>
+                    <h2 class="text-4xl font-light dark:text-neutral-200">
+                      {item.title}
+                    </h2>
+                    <p class="text-base font-light leading-normal dark:text-neutral-300">
+                      {item.description}
+                    </p>
+                  </div>
+                  <figure class="overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      class="h-full w-full object-contain"
+                    />
+                  </figure>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+</MainLayout>
