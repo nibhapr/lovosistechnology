@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
   const eventPosts = await getCollection("event");
-  return eventPosts.map((event) => ({
+  return eventPosts.map((event: CollectionEntry<"event">) => ({
     params: { slug: event.slug },
     props: { event },
   }));
@@ -13,7 +13,7 @@ const events: CollectionEntry<"event">[] = (await getCollection("event")).sort(
   (a: CollectionEntry<"event">, b: CollectionEntry<"event">) =>
     a.data.id - b.data.id
 );
-const { event } = Astro.props;
+const { event } = Astro.props as { event: CollectionEntry<"event"> };
 
 const structuredData = {
   "@context": "https://schema.org",

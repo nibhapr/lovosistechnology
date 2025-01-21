@@ -10,7 +10,6 @@ const eventsPost: CollectionEntry<"event">[] = (
   (a: CollectionEntry<"event">, b: CollectionEntry<"event">) =>
     b.data.startDate.valueOf() - a.data.startDate.valueOf()
 );
-const { event } = Astro.props;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -47,7 +46,7 @@ const structuredData = {
   description="Lovosis Technology L.L.C Events"
   sd={structuredData}
 >
-  <main class="container mx-auto px-4 py-8 text-black">
+  <main class="container mx-auto px-4 py-8 text-black dark:text-white">
     <h1 class="mb-12 text-center text-4xl font-bold">Upcoming Events</h1>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {eventsPost.map((eventEntry) => <CardEvent eventEntry={eventEntry} />)}

@@ -6,26 +6,14 @@ import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
-  // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://lovosis.com/",
-  /*image: {
-    domains: ["images.unsplash.com"],
-  },
-  pages: ["./src/pages", "./src/pages/products/[id].astro"],
-  components: [
-    "./src/components",
-   "./src/components/sections/products/[id].astro",
-  ],*/
-
   prefetch: true,
   integrations: [
     tailwind(),
     sitemap({
       i18n: {
         defaultLocale: "en",
-       
         locales: {
           en: "en",
           fr: "fr",
@@ -35,34 +23,30 @@ export default defineConfig({
     starlight({
       title: "Lovosis Doc",
       defaultLocale: "root",
-   
+
       locales: {
         root: {
           label: "English",
           lang: "en",
         },
-      
-     
-     
       },
-     
+
       sidebar: [
         {
-          label: "Quick Start Guides",
-       
+          label: "Support Center",
           autogenerate: {
             directory: "guides",
           },
         },
         {
-          label: "Tools & Equipment",
+          label: "Trouble shooting tips",
           items: [
             {
-              label: "Tool Guides",
-              link: "tools/tool-guides/",
+              label: "CCTV Camera",
+              link: "support/safety/",
             },
             {
-              label: "Equipment Care",
+              label: "NVR or DVR",
               link: "tools/equipment-care/",
             },
           ],
@@ -73,15 +57,10 @@ export default defineConfig({
             directory: "support",
           },
         },
-        {
-          label: "Advanced Topics",
-          autogenerate: {
-            directory: "advanced",
-          },
-        },
       ],
       social: {
-        github: "https://github.com/mearashadowfax/ScrewFast",
+        facebook:
+          "https://www.facebook.com/p/LOVOSIS-TECHNOLOGY-100083060600975",
       },
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],
