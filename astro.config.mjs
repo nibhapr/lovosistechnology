@@ -45,10 +45,10 @@ export default defineConfig({
               label: "CCTV Camera",
               link: "support/cctv/",
             },
-            {
-              label: "NVR or DVR",
-              link: "support/nvr/",
-            },
+            // {
+            //   label: "NVR or DVR",
+            //   link: "support/nvr/",
+            // },
           ],
         },
         // {
