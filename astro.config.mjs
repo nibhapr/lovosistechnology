@@ -21,7 +21,7 @@ export default defineConfig({
       },
     }),
     starlight({
-      title: "Lovosis Doc",
+      title: "Uniview support center",
       defaultLocale: "root",
 
       locales: {
@@ -43,20 +43,20 @@ export default defineConfig({
           items: [
             {
               label: "CCTV Camera",
-              link: "support/safety/",
+              link: "support/cctv/",
             },
             {
               label: "NVR or DVR",
-              link: "tools/equipment-care/",
+              link: "support/nvr/",
             },
           ],
         },
-        {
-          label: "Construction Services",
-          autogenerate: {
-            directory: "support",
-          },
-        },
+        // {
+        //   label: "Construction Services",
+        //   autogenerate: {
+        //     directory: "support",
+        //   },
+        // },
       ],
       social: {
         facebook:

@@ -41,7 +41,6 @@
 header {
     border: none !important;
     padding: 0 !important;
-    box-shadow: var(--backdrop-color);
 }
 
 header.header {
