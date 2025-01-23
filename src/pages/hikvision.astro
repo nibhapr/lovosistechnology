@@ -10,61 +10,111 @@ interface Props {
 }
 const descriptions: string =
   "Hikvision wholesale dealer in UAE offering top-quality CCTV cameras, access control, and security solutions at unbeatable prices. Contact us for bulk pricing";
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Lovosis Technology L.L.C",
-  url: "https://www.lovosis.com",
-  logo: "https://lovosis.com/logo.png",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+971 50 9162488",
-    contactType: "Sales",
-    areaServed: "AE",
-    availableLanguage: "English",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
-    addressLocality: "Dubai",
-    addressRegion: "United Arab Emirates",
-    postalCode: "123421",
-    addressCountry: "AE",
-  },
-  sameAs: [
-    "https://www.instagram.com/_lovosis_group_of_companies_/",
-    "https://in.linkedin.com/company/lovosis-technology-llc",
-  ],
-  brand: {
-    "@type": "Brand",
-    name: "Hikvision",
-    url: "https://www.hikvision.com",
-    logo: "https://lovosis.com/pictures/Brand%20Logo/logo.png",
-  },
-  product: {
-    "@type": "Product",
-    name: "Hikvision CCTV Camera",
-    image: "https://lovosis.com/pictures/hik.png",
-    description: { descriptions },
-    brand: {
-      "@type": "Brand",
-      name: "Hikvision",
-    },
-    offers: {
-      "@type": "Offer",
-      url: "https://lovosis.com/hikvision",
-      priceCurrency: "AED",
-      price: "250",
-      eligibleRegion: {
-        "@type": "Place",
-        name: "UAE",
-      },
-      priceValidUntil: "2024-12-31",
-    },
-  },
-};
----
 
+  const structuredData =  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lovosis.com/#organization",
+      "name": "lovosis.com",
+      "url": "https://lovosis.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://lovosis.com/#logo",
+        "url": "https://lovosis.com/logo.png",
+        "contentUrl": "https://lovosis.com/logo.png",
+        "caption": "lovosis.com",
+        "inLanguage": "en-GB",
+        "width": "1666",
+        "height": "167"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lovosis.com/#website",
+      "url": "https://lovosis.com",
+      "name": "Lovosis.com",
+      "publisher": {
+        "@id": "https://lovosis.com/#organization"
+      },
+      "inLanguage": "en-GB",
+       },
+    {
+      "@type": "ImageObject",
+      "@id": "https://lovosis.com/pictures/hik.png",
+      "url": "https://lovosis.com/pictures/hik.png",
+      "width": "200",
+      "height": "200",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lovosis.com/#webpage",
+      "url": "https://lovosis.com/",
+      "name": "Hikvision wholesale dealer in UAE - Hikvision-Uae",
+      "datePublished": "2023-08-26T06:58:56+01:00",
+      "dateModified": "2025-01-23T11:04:48+00:00",
+      "about": {
+        "@id": "https://lovosis.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://lovosis.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://lovosis.com/pictures/hik.png"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lovosis.com/author/",
+      "name": "lovosis",
+      "url": "https://lovosis.com/author/",
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://secure.gravatar.com/avatar/8c367ca02aa04da4888b5841d08b6efb?s=96&amp;d=mm&amp;r=g",
+        "url": "https://secure.gravatar.com/avatar/8c367ca02aa04da4888b5841d08b6efb?s=96&amp;d=mm&amp;r=g",
+        "caption": "lovosis",
+        "inLanguage": "en-GB"
+      },
+      "sameAs": [
+        "https://lovosis.com"
+      ],
+      "worksFor": {
+        "@id": "https://lovosis.com/#organization"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Hikvision wholesale dealer in UAE - Hikvision-UAE",
+      "keywords": "Hikvision wholesale dealer in UAE - Hikvision-UAE",
+      "datePublished": "2023-08-26T06:58:56+01:00",
+      "dateModified": "2025-01-23T11:04:48+00:00",
+      "author": {
+        "@id": "https://lovosis.com/author/",
+        "name": "Gafoor"
+      },
+      "publisher": {
+        "@id": "https://lovosis.com/#organization"
+      },
+      "description": descriptions,
+      "name": "Hikvision wholesale dealer in UAE - Hikvision-UAE",
+      "@id": "https://lovosis.com/#richSnippet",
+      "isPartOf": {
+        "@id": "https://lovosis.com/#webpage"
+      },
+      "image": {
+        "@id": "https://lovosis.com/pictures/hik.png"
+      },
+      "inLanguage": "en-GB",
+      "mainEntityOfPage": {
+        "@id": "https://lovosis.com/#webpage"
+      }
+    }
+  ]
+}
+---
 <style>
   .autoRotate {
     animation: autoRotateAnimation;
@@ -185,7 +235,7 @@ const structuredData = {
         <div class="mt-8 grid w-full sm:inline-flex">
           <PrimaryCTA
             title="Contact US"
-            url="https://hikvision-dubai.ae/contact-us/"
+            url="https://lovosis.com/contact-us/"
           />
         </div>
       </div>
