@@ -5,12 +5,14 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
+import partytown from '@astrojs/partytown';
 
 export default defineConfig({
   site: "https://lovosis.com/",
   prefetch: true,
   integrations: [
     tailwind(),
+    partytown(),
     sitemap({
       i18n: {
         defaultLocale: "en",
