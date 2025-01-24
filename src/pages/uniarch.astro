@@ -1,0 +1,187 @@
+---
+
+import MainLayout from "@/layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+const pageTitle: string = `UniArch Security Cameras | ${SITE.Title + " - " + "Professional Surveillance Solutions In Dubai, United Arab Emirates"}`;
+interface Props {
+  title: string;
+  subTitle?: string;
+  benefits?: Array<string>;
+}
+
+const abtitle: string = "UniArch Security Cameras in Dubai";
+const absubTitle: string = "Discover Lovosis, Dubai's authorized supplier of premium UniArch surveillance solutions."
+const structuredData={
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lovosis.com/uniarch",
+    "url": "https://lovosis.com/uniarch",
+    "name": "UniArch Security Cameras | Lovosis",
+    "description": "Discover Lovosis, Dubai's authorized supplier of premium UniArch surveillance solutions. Professional security camera systems for homes and businesses in UAE.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://lovosis.com",
+      "name": "Lovosis",
+      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+    },
+    "inLanguage": "en-US"
+  }
+---
+
+<style>
+  .autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+  @keyframes autoRotateAnimation{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }  
+
+  .autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+
+    }
+
+    @keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    }
+
+    .fadeInRight {
+    animation: fadeInRightAnimation;
+    animation-timeline: view();
+    }
+
+    @keyframes fadeInRightAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+</style>
+
+
+<MainLayout
+  title={pageTitle} sd={structuredData}
+
+>
+
+
+
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+
+  <div class="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20">
+    <h1
+      class="text-balance animate-fade-in-left text-3xl md:text-6xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100"
+    >
+      {abtitle}
+    </h1>
+    <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
+      {absubTitle}
+    </p>
+  </div>
+ 
+    <div class="grid lg:grid-cols-2 justify-items-center gap-5">
+    <div class="flex flex-col justify-center">
+        <img src="/pictures/uniarch-cameras.webp" alt="UniArch security cameras" />
+    </div>
+    <div class="order-1 lg:order-2">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-200">Advanced Security with UniArch Cameras</h2>
+        <p class="text-md mt-4 dark:text-gray-300">UniArch represents the pinnacle of modern surveillance technology, offering cutting-edge security camera solutions for both residential and commercial applications. As an authorized distributor in Dubai, Lovosis provides the complete range of UniArch's innovative security products, featuring advanced AI capabilities, crystal-clear 4K resolution, and robust security features that ensure round-the-clock protection for your property.</p>
+    </div>
+  </div>
+ 
+
+
+  <div class="text-center mt-32 rounded-2xl mb-20">
+    <h1 class="text-balance animate-fade-in-left text-2xl md:text-4xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
+    Key Features of UniArch Surveillance Solutions
+    </h1>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 mt-20 sm:px-6 lg:px-8 lg:py-1">
+    <ul id="cards" class="list-none grid grid-cols-1 gap-8">
+      <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
+        <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
+          <figure class="overflow-hidden">
+            <img src="/pictures/uniarch-4k.jpg" alt="4K UniArch Camera" class="w-full h-full object-cover rounded-lg" />
+          </figure>
+          <div>
+            <h2 class="text-3xl font-semibold dark:text-neutral-200">4K Ultra HD Resolution</h2>
+            <p class="text-base leading-relaxed dark:text-neutral-300 mt-4">
+              Experience unmatched clarity with UniArch's 4K Ultra HD cameras. These advanced devices capture every detail with stunning precision, featuring:
+              <ul class="list-disc ml-5 mt-2 space-y-2">
+                <li>8MP resolution for crystal-clear footage</li>
+                <li>Superior night vision capabilities</li>
+                <li>Wide dynamic range for balanced exposure</li>
+                <li>Advanced image processing for optimal clarity</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
+        <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
+          <figure class="overflow-hidden">
+            <img src="/pictures/uniarch-ai.jpg" alt="AI-Powered UniArch Camera" class="w-full h-full object-cover rounded-lg" />
+          </figure>
+          <div>
+            <h2 class="text-3xl font-semibold dark:text-neutral-200">Intelligent AI Detection</h2>
+            <p class="text-base leading-relaxed dark:text-neutral-300 mt-4">
+              UniArch's AI-powered surveillance features advanced detection capabilities:
+              <ul class="list-disc ml-5 mt-2 space-y-2">
+                <li>Human and vehicle detection</li>
+                <li>Smart motion tracking</li>
+                <li>Facial recognition technology</li>
+                <li>Real-time alert notifications</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
+        <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
+          <figure class="overflow-hidden">
+            <img src="/pictures/uniarch-storage.jpg" alt="UniArch Storage Solutions" class="w-full h-full object-cover rounded-lg" />
+          </figure>
+          <div>
+            <h2 class="text-3xl font-semibold dark:text-neutral-200">Professional Storage Solutions</h2>
+            <p class="text-base leading-relaxed dark:text-neutral-300 mt-4">
+              Secure and efficient storage options for all your surveillance needs:
+              <ul class="list-disc ml-5 mt-2 space-y-2">
+                <li>Local NVR storage with large capacity</li>
+                <li>Cloud storage integration</li>
+                <li>Encrypted data protection</li>
+                <li>Easy backup and retrieval systems</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+</section>
+</MainLayout>
