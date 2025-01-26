@@ -6,6 +6,8 @@ import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 import partytown from '@astrojs/partytown';
+import mdx from '@astrojs/mdx';
+import astroExpressiveCode from 'astro-expressive-code';
 
 export default defineConfig({
   site: "https://lovosis.com/",
@@ -13,6 +15,8 @@ export default defineConfig({
   integrations: [
     tailwind(),
     partytown(),
+    astroExpressiveCode(),
+    mdx(),
     sitemap({
       i18n: {
         defaultLocale: "en",

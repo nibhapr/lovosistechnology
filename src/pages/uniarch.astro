@@ -8,7 +8,7 @@ interface Props {
   subTitle?: string;
   benefits?: Array<string>;
 }
-
+const description = "Uniarch wholesale dealer in UAE offering top-quality CCTV cameras, access control, and security solutions at unbeatable prices. Contact us for bulk pricing"
 const abtitle: string = "UniArch Security Cameras in Dubai";
 const absubTitle: string = "Discover Lovosis, Dubai's authorized supplier of premium UniArch surveillance solutions."
 const structuredData={
@@ -17,12 +17,12 @@ const structuredData={
     "@id": "https://lovosis.com/uniarch",
     "url": "https://lovosis.com/uniarch",
     "name": "UniArch Security Cameras | Lovosis",
-    "description": "Discover Lovosis, Dubai's authorized supplier of premium UniArch surveillance solutions. Professional security camera systems for homes and businesses in UAE.",
+    "description": description,
     "isPartOf": {
       "@type": "WebSite",
       "url": "https://lovosis.com",
       "name": "Lovosis",
-      "description": "Custom Fabrication & Surveillance Solution Provider In Dubai, United Arab Emirates."
+
     },
     "inLanguage": "en-US"
   }
@@ -96,10 +96,61 @@ const structuredData={
       {absubTitle}
     </p>
   </div>
+  <div class="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-1">
+    <ul id="cards" class="grid list-none grid-cols-1 grid-rows-4 gap-4">
+      {
+        [
+          {
+            title: "",
+            description: "High quality image with 3MP, 1/3,2304*1296@20fps in the main stream,Built-in Mic & Speaker, support two-way audio, offer better interaction,Support sound and light warning, makes warning and alarming more noticeable",
+            image: "/public/pictures/Uho-P2A-M3F4D.png",
+          },
+          {
+            title: "Uho-P3C-M5F4",
+            description: "High quality image with 5MP, 1/1.8,5MP (2880*1620)@25/20fps; 4MP (2560*1440)@25/20fps; 3MP (2304*1296)@30/25fps; 2MP (1920*1080)@30/25fps;H.264,-Colorhunter%20with%20Wise,Colorhunter with Wise-ISP technology ensures 24-hour full-color images,Support digital WDR (Wide Dynamic Range)",
+
+            image: "/public/pictures/Uho-P3C-M5F4.png",
+          },
+          {
+            title: "Uho-S3S-M33D",
+            description: "Fixed camera and PT camera integration, dual channels with one IP, look at overall situation and consider details at the same time,Ultra 265, H.265, H.264,Support digital WDR (Wide Dynamic Range),Built-in Mic & Speaker, support two-way audio, offer better interaction",
+            image: "/public/pictures/Uho-S3S-M33D.png",
+          },
+          {
+            title: "Uho-B2D-M5F3D",
+            description: "High quality image with 5MP, 1/3,Ultra 265, H.265, H.264, MJPEG,Smart IR, up to 20m (66ft) IR distance,Support 128 G Micro SD card",
+            image: "/public/pictures/Uho-B2D-M5F3D.jpg",
+          },
+        ].map((item) => (
+          <li class="card sticky top-32 cursor-pointer rounded-lg bg-white pt-4 shadow-xl transition-all duration-300 dark:bg-neutral-600">
+            <div class="card__content relative grid grid-cols-1 gap-1 rounded-lg p-5 text-left md:grid-cols-2">
+              <div>
+                <h2 class="text-4xl font-light dark:text-neutral-200">
+                  {item.title}
+                </h2>
+                <p class="text-base font-light leading-normal dark:text-neutral-300">
+                  {item.description}
+                </p>
+              </div>
+              <div class="self-end">
+              <figure class="overflow-hidden h-64">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="h-full w-full object-contain"
+                />
+              </figure>
+            </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
  
-    <div class="grid lg:grid-cols-2 justify-items-center gap-5">
+    <!-- <div class="grid lg:grid-cols-2 justify-items-center gap-5">
     <div class="flex flex-col justify-center">
-        <img src="/pictures/uniarch-cameras.webp" alt="UniArch security cameras" />
+        <img src="/public/pictures/Uho-S3S-M33D.png" alt="UniArch security cameras" />
     </div>
     <div class="order-1 lg:order-2">
         <h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-200">Advanced Security with UniArch Cameras</h2>
@@ -120,7 +171,7 @@ const structuredData={
       <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
         <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
           <figure class="overflow-hidden">
-            <img src="/pictures/uniarch-4k.jpg" alt="4K UniArch Camera" class="w-full h-full object-cover rounded-lg" />
+            <img src="/public/pictures/Uho-P2A-M3F4D.png" alt="4K UniArch Camera" class="w-full h-full object-cover rounded-lg" />
           </figure>
           <div>
             <h2 class="text-3xl font-semibold dark:text-neutral-200">4K Ultra HD Resolution</h2>
@@ -140,7 +191,7 @@ const structuredData={
       <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
         <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
           <figure class="overflow-hidden">
-            <img src="/pictures/uniarch-ai.jpg" alt="AI-Powered UniArch Camera" class="w-full h-full object-cover rounded-lg" />
+            <img src="/public/pictures/Uho-P3C-M5F4.png" alt="AI-Powered UniArch Camera" class="w-full h-full object-cover rounded-lg" />
           </figure>
           <div>
             <h2 class="text-3xl font-semibold dark:text-neutral-200">Intelligent AI Detection</h2>
@@ -160,7 +211,7 @@ const structuredData={
       <li class="card sticky top-32 pt-4 bg-white dark:bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition-all duration-300 autoShow">
         <div class="card__content grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-lg text-left relative">
           <figure class="overflow-hidden">
-            <img src="/pictures/uniarch-storage.jpg" alt="UniArch Storage Solutions" class="w-full h-full object-cover rounded-lg" />
+            <img src="/public/pictures/Uho-S3S-M33D.png" alt="UniArch Storage Solutions" class="w-full h-full object-cover rounded-lg" />
           </figure>
           <div>
             <h2 class="text-3xl font-semibold dark:text-neutral-200">Professional Storage Solutions</h2>
@@ -177,11 +228,6 @@ const structuredData={
         </div>
       </li>
     </ul>
-  </div>
-
-
-
-
-
+  </div> -->
 </section>
 </MainLayout>
