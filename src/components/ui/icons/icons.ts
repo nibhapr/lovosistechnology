@@ -44,6 +44,18 @@ export const Icons = {
     viewBox: "0 -960 960 960",
   },
 
+  google:{
+    paths: [
+      {
+        d: "M4 2L20 2C21.104 2 22 2.896 22 4V20C22 21.104 21.104 22 20 22H4C2.896 22 2 21.104 2 20V4C2 2.896 2.896 2 4 2ZM6 4V6H10V4H6ZM14 4V6H18V4H14ZM6 8V10H10V8H6ZM14 8V10H18V8H14ZM6 12V14H10V12H6ZM14 12V14H18V12H14ZM6 16V18H10V16H6ZM14 16V18H18V16H14Z"
+      }
+    ],
+    class: "mt-2 h-6 w-6 flex-shrink-0 fill-neutral-700 hs-tab-active:fill-teal-600 dark:fill-neutral-300 dark:hs-tab-active:fill-blue-600 md:h-7 md:w-7",
+    width: 48,
+    height: 48,
+    viewBox: "0 0 24 24"
+  },
+
   cctv: {
     paths: [
       {
