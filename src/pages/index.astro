@@ -57,7 +57,7 @@ const structuredData={
         {
           "@type": "ListItem",
           position: 1,
-          item: { "@id": SITE.baseURL, name: "Home" },
+          item: { "@id": "https://lovosis.com", name: "Home" },
         },
         
       ],
@@ -68,7 +68,7 @@ const structuredData={
       url: URL,
       name: NAME,
       datePublished: "2024-02-05T11:26:39+00:00",
-      dateModified: "2025-01-02T19:17:19+00:00",
+      dateModified: "2025-01-26T19:17:19+00:00",
       about: { "@id": "https://lovosis.com/#organization" },
       isPartOf: { "@id": "https://lovosis.com/#website" },
       primaryImageOfPage: { "@id": IMAGE },
@@ -76,34 +76,107 @@ const structuredData={
     },
     {
       "@type": "Person",
-      "@id": URL,
-      name: "Lovosis",
-      url: URL,
+      "@id": "https://lovosis.com/author",
+      name: "Gafoor T.C",
+      url: "https://lovosis.com/author",
       image: {
         "@type": "ImageObject",
-        "@id": URL,
-        url: URL,
-        caption: NAME,
+        "@id": "https://lovosis.com/pictures/team/profile%20Gafoor.jpg" ,
+        url: "https://lovosis.com/pictures/team/profile%20Gafoor.jpg",
+        caption: "Gafoor T.C",
         inLanguage: "en-US",
       },
-      sameAs: [URL],
+      sameAs: ["https://www.instagram.com/lovosis_technology"],
       worksFor: { "@id": "https://lovosis.com/#organization" },
     },
     {
-      "@type": "Article",
-      headline:pageTitle,
-      keywords: "UNV distributor | Hikvision Dealer | Dahua wholesale distributor",
-      datePublished: "2024-02-05T11:26:39+00:00",
-      dateModified: "2025-12-12T19:17:19+00:00",
-      author: { "@id": URL, name: "Gafoor T.C" },
-      publisher: { "@id": "https://lovosis.com/#organization" },
-      description: "Looking for wholesale prices on UNV, Hikvision, or Dahua security products? We offer top-rated surveillance equipment for businesses and resellers",
-      name: NAME,
-      "@id": "https://lovosis.com/#richSnippet",
-      isPartOf: { "@id": "https://lovosis.com/#webpage" },
-      image: { "@id": IMAGE },
-      inLanguage: "en-US",
-      mainEntityOfPage: { "@id": "https://lovosis.com/#webpage" },
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is Lovosis Technology?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lovosis Technology is a leading distributor and wholesaler of high-quality security and surveillance products in Dubai, UAE. We provide cutting-edge solutions for businesses, resellers, and home security needs. Our range includes surveillance cameras, network video recorders (NVRs), and accessories from industry-leading brands."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What brands do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are proud to offer products from the following trusted brands:\n- Dahua Technologies: As a Diamond Partner of Dahua Technologies, we offer an extensive range of Dahua’s innovative surveillance solutions, including cameras, recorders, and accessories.\n- UNV (Uniview): As the official UNV partner in Dubai, we provide high-performance surveillance equipment for businesses and homes.\n- Hikvision: We are the best wholesaler of Hikvision products, known for their superior video surveillance technology.\n- Uniarch: Uniarch is our exclusive in-house brand. We offer a wide range of affordable yet reliable surveillance products under the Uniarch name."
+        }
+        },{
+        "@type": "Question",
+        "name": "Why should I choose Lovosis Technology?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "**Exclusive Partnerships**: As a Diamond Partner with Dahua Technologies and the official UNV partner in Dubai, we offer top-tier products and services that meet the highest standards in the security industry.\n- **Competitive Pricing**: We are committed to providing the best wholesale prices on high-quality security equipment.\n- **Trusted Expertise**: With years of experience in the industry, we offer expert advice and support to ensure you get the right solutions for your needs.\n- **Uniarch Brand**: Our exclusive Uniarch brand delivers exceptional value, offering high-quality security products at affordable prices."
+      }
+    },{
+      "@type": "Question",
+        "name": "What types of security products do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer a wide variety of security products, including:\n- **IP Cameras**: High-definition and advanced security cameras from Dahua, UNV, Hikvision, and Uniarch.\n- **Network Video Recorders (NVRs)**: For centralized video management and storage.\n- **Accessories**: Power supplies, cables, mounts, and more to complement your security setup.\n- **Complete Surveillance Systems**: Pre-configured surveillance kits for home or business use."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "What is Dahua’s Diamond Partner status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As a Diamond Partner of Dahua Technologies, Lovosis Technology has been recognized for its excellence in selling and servicing Dahua products. This partnership allows us to offer exclusive access to the latest Dahua technologies, enhanced support, and preferential pricing."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "What does it mean to be an official UNV partner in Dubai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Being an official UNV partner means that Lovosis Technology is authorized to distribute and sell UNV products in Dubai and the UAE. We provide full access to UNV’s top-of-the-line surveillance solutions, ensuring our customers get the most reliable and advanced security systems available"
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "Do you offer Hikvision products at wholesale prices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, at Lovosis Technology, we are proud to be one of the best wholesalers of Hikvision products in Dubai. We offer competitive wholesale prices for all types of Hikvision security equipment, including cameras, recorders, and accessories. Whether you are a business, reseller, or distributor, we can provide you with the best deals available in the market."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "Do you offer warranty on your products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all products purchased from Lovosis Technology come with a manufacturer’s warranty, depending on the brand and model. For more details, please check the warranty information specific to the product you are purchasing or contact our customer support team for assistance."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "How do I become a reseller or distributor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you are interested in becoming a reseller or distributor of Lovosis Technology products, including Dahua, UNV, Hikvision, or Uniarch, please reach out to us via our contact page. We offer competitive pricing and support to help you succeed in your business."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "Do you offer international shipping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer international shipping on most of our products. Please contact us for shipping details and any applicable shipping fees based on your location."
+      }
+    },
+    {
+      "@type": "Question",
+        "name": "What is the return policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our return policy allows you to return products within a specified period (typically 14-30 days), provided they are unused, in their original packaging, and meet other conditions as outlined in our terms and conditions. For detailed return instructions, please refer to our Return & Refund Policy."
+      }
+    }
+    ]
     },
   ],
 };
