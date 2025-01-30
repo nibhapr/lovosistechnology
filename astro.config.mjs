@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
+import vercelStatic from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
@@ -17,7 +17,7 @@ export default defineConfig({
     partytown(),
     astroExpressiveCode(),
     mdx(),
-    sitemap({
+       sitemap({
       i18n: {
         defaultLocale: "en",
         locales: {
@@ -103,8 +103,7 @@ export default defineConfig({
   ],
   output: "static",
   experimental: {
-    clientPrerender: true,
-    directRenderScript: true,
+
   },
   adapter: vercelStatic(),
 });

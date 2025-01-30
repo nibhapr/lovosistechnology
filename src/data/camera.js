@@ -22,4 +22,39 @@ export const cameraData = [
       image: "/pictures/Uho-B2D-M5F3D.jpg",
     },
   ];
-  
+  export const LovosisData = [
+    {
+      title: "Authorized UNV Distributor",
+      description: "We are the official distributor of UNV cameras and UNV CCTV systems in Dubai, providing you with direct access to the latest products and innovations",
+      image: "/pictures/icons/icon2.png",
+    },
+    {
+      title: "Wide Range of UNV CCTV Products",
+      description: " Our product range includes everything from Uniview cameras to complete CCTV systems, ensuring that you find the perfect solution for your security needs.",
+      image: "/pictures/icons/icon.png",
+    },
+    {
+      title: "Competitive UNV CCTV Camera Prices",
+      description: "With our established network and bulk purchasing power, we offer the best UNV CCTV camera prices in the Middle East, providing you with unbeatable value.",
+      image: "/pictures/icons/icon6.png",
+    },
+   
+  ];
+  export const unvData = [
+    {
+      title: "Superior Video Quality:",
+      description: "UNV cameras provide crystal-clear 4K resolution, ensuring every detail is captured.",
+      image: "/pictures/icons/icon45.png",
+    },
+    {
+      title: "Advanced AI Technology",
+      description: "UNV CCTV systems are equipped with AI-powered features like facial recognition, motion detection, and intrusion alerts",
+      image: "/pictures/icons/icon7.png",
+    },
+    {
+      title: "Competitive UNV CCTV Camera Prices",
+      description: "With our established network and bulk purchasing power, we offer the best UNV CCTV camera prices in the Middle East, providing you with unbeatable value.",
+      image: "/pictures/icons/icon6.png",
+    },
+   
+  ];
