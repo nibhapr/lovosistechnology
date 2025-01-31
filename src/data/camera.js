@@ -21,7 +21,7 @@ export const cameraData = [
     title: "Uho-B2D-M5F3D",
     description:
       "High quality image with 5MP, 1/3,Ultra 265, H.265, H.264, MJPEG,Smart IR, up to 20m (66ft) IR distance,Support 128 G Micro SD card",
-    image: "/pictures/Uho-B2D-M5F3D.jpg",
+    image: "/pictures/uniarchcamera.png",
   },
 ];
 export const univiewData = [
@@ -34,19 +34,19 @@ export const univiewData = [
   {
     title: "IPC6658SR-X25-VF",
     description:
-      "High quality image with 8MP,1/1.8’’ CMOS sensor,3840*2160@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring, suitable for different statistical scenarios,Lighthunter technology ensures ultra-high image quality in low illumination environment",
+      "High quality image with 8MP,1/1.8’’ CMOS sensor,3840*2160@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
     image: "/pictures/unv/unv2.png",
   },
   {
     title: "IPC6315LFW-AX5C-VG1",
     description:
-      "High quality image with 5MP, 1/2.8, CMOS sensorUltra 265, H.265, H.264, MJPEG,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,LightHunter technology ensures ultra-high image quality in low illumination environment,Up to 120 dB WDR (Wide Dynamic Range),Built-in Mic & Speaker,Smart IR, Up to 50 m (164 ft) IR distance and 15m (49 ft) warm light distance,Micro SD, up to 512GB",
+      "High quality image with 5MP, 1/2.8, CMOS sensorUltra 265, H.265, H.264, MJPEG,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,LightHunter technology ensures ultra-high image quality in low illumination environment,Up to 120 dB WDR (Wide Dynamic Range)",
     image: "/pictures/unv/unv3.png",
   },
   {
     title: "IPC6424SR-X25-VF-B",
     description:
-      "High quality image with 4MP,1/2.8’’ CMOS sensor,2688*1520@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring, suitable for different statistical scenarios,Lighthunter technology ensures ultra-high image quality in low illumination environment",
+      "High quality image with 4MP,1/2.8’’ CMOS sensor,2688*1520@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
     image: "/pictures/unv/unv4.png",
   },
 ];
