@@ -90,3 +90,23 @@ export const unvData = [
     image: "/pictures/icons/icon6.png",
   },
 ];
+export const dahuaData = [
+  {
+    title: "High-Quality Dahua IP Cameras",
+    description:
+      "For those seeking reliable, high-resolution video surveillance, Dahua IP cameras offer exceptional image quality and smart features. Ideal for both commercial and residential settings, Dahua IP cameras integrate seamlessly with your network and offer remote monitoring via smartphones and other devices. Whether you need to keep an eye on your business or secure your home, Dahua IP cameras are the perfect choice.",
+    image: "/pictures/icons/icon45.png",
+  },
+  {
+    title: "Dahua WiFi Cameras: Convenient and Flexible Surveillance",
+    description:
+      "If you need a wireless solution for your surveillance needs, Dahua WiFi cameras are ideal. They provide flexible installation options without the need for extensive wiring. Whether for home security or small businesses, Dahua WiFi cameras offer ease of use, mobility, and reliable performance.",
+    image: "/pictures/icons/icon7.png",
+  },
+  {
+    title: "Competitive Dahua Camera Prices in Dubai",
+    description:
+      "At Lovosis Technology L.L.C, we believe in providing affordable, high-quality Dahua cameras to meet the diverse needs of our customers. Whether you’re looking for a budget-friendly Dahua camera or a premium Dahua CCTV system, we offer competitive Dahua camera prices in the UAE, ensuring that you get the best value for your investment in security.",
+    image: "/pictures/icons/icon6.png",
+  },
+];
