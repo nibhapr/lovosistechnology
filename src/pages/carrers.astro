@@ -1,12 +1,17 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
+import { Picture } from "astro:assets";
+import { ParseStatus } from "astro:schema";
 
 const pageTitle: string = `Careers | ${SITE.Title + " - " + "Join Our Team at Lovosis Technology"}`;
-
+const description ="Join Lovosis Technology, the leading security system distributor in Dubai & the Middle East. We're hiring IT staff for our Bangalore office. Apply now!";
 const careers = [
   {
     title: "Digital Marketing",
+    datePosetd: "2025-02-09",
+    descriptions: "Lovosis Technology is hiring a Digital Marketing expert for our Bangalore office. Join us to shape our online presence in the Middle East and beyond!",
+    validThrough: "2025-03-09T23:59:59",
     type: "Full-time",
     location: "Bangalore, India",
     department: "Marketing",
@@ -16,6 +21,9 @@ const careers = [
   },
   {
     title: "Frontend Developer",
+    datePosetd: "2025-02-09",
+    descriptions: "We’re looking for a Frontend Developer to join Lovosis Technology in Bangalore. Work on cutting-edge projects and help build amazing user experiences!",
+    validThrough: "2025-03-09T23:59:59",
     type: "Full-time",
     location: "Bangalore, India",
     department: "Engineering",
@@ -25,6 +33,9 @@ const careers = [
   },
   {
     title: "Backend Developer",
+    datePosetd: "2025-02-09",
+    descriptions: "Lovosis Technology is hiring a Backend Developer for our Bangalore office. Help us build robust, scalable systems that power top security solutions!",
+    validThrough: "2025-03-09T23:59:59",
     type: "Full-time",
     location: "Bangalore, India",
     department: "Engineering",
@@ -68,9 +79,81 @@ const benefits = [
     bgColor: "from-orange-500 to-red-600"
   }
 ];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Lovosis Technology L.L.C",
+      url: "https://lovosis.com",
+      logo: "https://lovosis.come.com/pictures/logo.png",
+      description: description,
+      sameAs: [
+        "https://www.facebook.com/p/LOVOSIS-TECHNOLOGY-100083060600975/",
+        "https://www.instagram.com/_lovosis_group_of_companies_/reels/",
+      ],
+      email: "sales@lovosis.com",
+      telephone: "+971509162488",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
+        addressLocality: "Dubai",
+        addressCountry: "AE",
+        addressRegion: "Dubai,United Arab Emirates",
+        postalCode: "123421",
+      },
+    },
+    
+    careers.map((p) => {
+      return {
+    "@type": "JobPosting",
+      title: p.title,
+      description: "",
+      identifier: {
+        "@type": "PropertyValue",
+        name: "Lovosis Technology LLC",
+        value: 1021
+      },
+      datePosted: p.datePosetd,
+      validThrough: p.validThrough,
+      employmentType: p.type,
+
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Street Address",
+          addressLocality: p.location,
+          addressRegion: "Karnataka",
+          postalCode: "560090",
+          addressCountry: "IN"
+        },
+        hiringOrganization: {
+        "@type": "Organization",
+        name: "Lovosis Technology LLC",
+        sameAs: "https://www.lovosis.com",
+        logo: "https://lovosis.come.com/pictures/logo.png",
+        url: "https://www.lovosis.com",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+971509162488",
+          contactType: "Recruitment",
+          areaServed: "IN",
+          availableLanguage: "English"
+        }
+      },
+      qualifications: p.qualifications,
+      skills: p.skills,
+      },
+      };
+    }),
+  ],
+};
 ---
 
-<MainLayout title={pageTitle}>
+<MainLayout title={pageTitle} sd={structuredData} description= {description}>
   <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
     <!-- Hero Section -->
     <div class="text-center bg-gradient-to-r from-blue-600 to-indigo-700 p-5 md:p-16 rounded-2xl mb-20">

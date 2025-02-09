@@ -110,3 +110,5 @@ export const dahuaData = [
     image: "/pictures/icons/icon6.png",
   },
 ];
+
+
