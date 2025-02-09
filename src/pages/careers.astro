@@ -82,9 +82,7 @@ const benefits = [
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@graph": [
-     
-    careers.map((p) => {
+  "@graph":careers.map((p) => {
       return {
     "@type": "JobPosting",
       title: p.title,
@@ -114,6 +112,7 @@ const structuredData = {
         sameAs: "https://www.lovosis.com",
         logo: "https://lovosis.come.com/pictures/logo.png",
         url: "https://www.lovosis.com",
+        
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+971509162488",
@@ -122,12 +121,13 @@ const structuredData = {
           availableLanguage: "English"
         }
       },
+      
+      },
       qualifications: p.qualifications,
       skills: p.skills,
-      },
       };
     }),
-  ],
+  
 };
 ---
 
