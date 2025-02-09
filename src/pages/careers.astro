@@ -83,34 +83,12 @@ const benefits = [
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      name: "Lovosis Technology L.L.C",
-      url: "https://lovosis.com",
-      logo: "https://lovosis.come.com/pictures/logo.png",
-      description: description,
-      sameAs: [
-        "https://www.facebook.com/p/LOVOSIS-TECHNOLOGY-100083060600975/",
-        "https://www.instagram.com/_lovosis_group_of_companies_/reels/",
-      ],
-      email: "sales@lovosis.com",
-      telephone: "+971509162488",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
-        addressLocality: "Dubai",
-        addressCountry: "AE",
-        addressRegion: "Dubai,United Arab Emirates",
-        postalCode: "123421",
-      },
-    },
-    
+     
     careers.map((p) => {
       return {
     "@type": "JobPosting",
       title: p.title,
-      description: "",
+      description: p.descriptions,
       identifier: {
         "@type": "PropertyValue",
         name: "Lovosis Technology LLC",
