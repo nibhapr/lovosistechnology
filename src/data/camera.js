@@ -109,6 +109,29 @@ export const dahuaData = [
       "At Lovosis Technology L.L.C, we believe in providing affordable, high-quality Dahua cameras to meet the diverse needs of our customers. Whether you’re looking for a budget-friendly Dahua camera or a premium Dahua CCTV system, we offer competitive Dahua camera prices in the UAE, ensuring that you get the best value for your investment in security.",
     image: "/pictures/icons/icon6.png",
   },
+
+ 
+];
+export const unvdisplaydata = [
+  {
+    title: "MW7880-FO-D",
+    description:
+      "Energy saving voltage division design and high conversion efficiency power supply reduce the power consumption of the whole device by 30%.High refresh rate, high brightness, wide viewing angle, no glare, and low attenuation offer better visual experience.High grayscale image delivers more details.Supports 360°arc splicing screen for naked-eye 3D display effect.Aluminum alloy cabinet, each only weights 24.5kg.",
+    image: "/pictures/unv/MW7857-FO-D.jpg",
+  },
+  {
+    title: "MW78XX-FI",
+    description:
+      "Industrial-grade panel, highly reliable integrated structure design, continuous stable operation.Direct-lit LED backlight provides high brightness uniformity without border shadows.Ultra-narrow 1.7 mm seam.Supports white balance adjustment, delivering delicate and colorful images.Wide 178 viewing angles.Built-in image splicing function.Support anti-burn technology, landscape and portrait installation.Supports delayed boot after power on.Advanced direct-lit local dimming technology with low power consumption, saving energy",
+    image: "/pictures/unv/lcdw.png",
+  },
+  {
+    title: "MW7818-FI-EB",
+    description:
+      "Advanced grayscale gives detailed and realistic images.Seamlessly splices images without black lines on the screen.Simple and stylish appearance, easy to install.High brightness and contrast provide optimal imagesTakes up less space with a slim and compact design.Long lifetime.Low heat, excellent heat dissipation, no noise.Low failure rate and maintenance cost.Ultra-wide viewing angle ensures satisfactory viewing experience from diversified angles.High refresh rate and frame frequency provide high image quality without ghosting or smearing",
+    image: "/pictures/unv/MW7818-FI-EB.jpg",
+  },
+
 ];
 
 
