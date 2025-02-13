@@ -5,6 +5,7 @@ import { unvData } from "../data/camera";
 import { LovosisData } from "../data/camera";
 import { univiewData } from "../data/camera";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { isTemplateExpression } from "typescript";
 
 const pageTitle: string =
   "UNV Cameras & CCTV Solutions in Dubai | Lovosis Technology";
@@ -49,16 +50,51 @@ const structuredData = {
       url: "https://lovosis.com/unv",
       description: description,
     },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lovosis.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@id": "https://lovosis.com",
+            name: "Home",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@id": "https://lovosis.com/unv",
+            name: "Unv",
+          },
+        },
+      ],
+    },
     univiewData.map((p) => {
       return {
-        "@type": "ImageObject",
-        contentUrl: `${Astro.url}${p.image}`,
-        captionn: p.title,
-        creator: {
-          "@type": "organization",
-          name: "Digiimpact",
+        "@type": "ItemList",
+        itemListElement: {
+          "@type": "ListItem",
+          position: p.id,
+          item: {
+            "@type": "Product",
+            name: p.title,
+            description: p.description,
+            image: `${Astro.url}${p.image}`,
+          },
         },
-        copyrightNotice: "Lovosis technology L.L.C",
+        image: {
+          "@type": "ImageObject",
+          contentUrl: `${Astro.url}${p.image}`,
+          captionn: p.title,
+          creator: {
+            "@type": "organization",
+            name: "Digiimpact",
+          },
+          copyrightNotice: "Lovosis technology L.L.C",
+        },
       };
     }),
   ],
