@@ -82,6 +82,10 @@ const structuredData = {
           image: `${Astro.url}${p.image}`, // Simple image URL
           review: {
             "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: p.author,
+            },
             reviewRating: {
               "@type": "Rating",
               ratingValue: 4,
@@ -90,13 +94,12 @@ const structuredData = {
           },
           brand: {
             "@type": "Brand",
-            name: "UNV", // Replace with your brand name
+            name: "UNV",
           },
           additionalImage: {
-            // Use a different property name for the ImageObject
             "@type": "ImageObject",
             contentUrl: `${Astro.url}${p.image}`,
-            caption: p.title, // Corrected typo: `captionn` to `caption`
+            caption: p.title,
             creator: {
               "@type": "Organization",
               name: "Digiimpact",
