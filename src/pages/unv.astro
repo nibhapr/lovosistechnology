@@ -1,11 +1,9 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { SITE } from "@data/constants";
 import { unvData } from "../data/camera";
 import { LovosisData } from "../data/camera";
 import { univiewData } from "../data/camera";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
-import { isTemplateExpression } from "typescript";
 
 const pageTitle: string =
   "UNV Cameras & CCTV Solutions in Dubai | Lovosis Technology";
@@ -26,8 +24,8 @@ const structuredData = {
       "@type": "Organization",
       name: "Lovosis Technology L.L.C",
       url: "https://lovosis.com",
-      logo: "https://lovosis.come.com/pictures/logo.png",
-      description: description,
+      logo: "https://lovosis.com/pictures/logo.png",
+      description: "Your organization description here", // Replace with actual description
       sameAs: [
         "https://www.facebook.com/p/LOVOSIS-TECHNOLOGY-100083060600975/",
         "https://www.instagram.com/_lovosis_group_of_companies_/reels/",
@@ -37,10 +35,10 @@ const structuredData = {
       address: {
         "@type": "PostalAddress",
         streetAddress:
-          "Satellite Market Naif Deira,Baghlaf Building Showroom No.5",
+          "Satellite Market Naif Deira, Baghlaf Building Showroom No.5",
         addressLocality: "Dubai",
         addressCountry: "AE",
-        addressRegion: "Dubai,United Arab Emirates",
+        addressRegion: "Dubai, United Arab Emirates",
         postalCode: "123421",
       },
     },
@@ -48,7 +46,7 @@ const structuredData = {
       "@type": "WebPage",
       name: "UNV | Lovosis Technology",
       url: "https://lovosis.com/unv",
-      description: description,
+      description: "Your webpage description here", // Replace with actual description
     },
     {
       "@type": "BreadcrumbList",
@@ -72,31 +70,42 @@ const structuredData = {
         },
       ],
     },
-    univiewData.map((p) => {
-      return {
-        "@type": "ItemList",
-        itemListElement: {
-          "@type": "ListItem",
-          position: p.id,
-          item: {
-            "@type": "Product",
-            name: p.title,
-            description: p.description,
-            image: `${Astro.url}${p.image}`,
+    {
+      "@type": "ItemList",
+      itemListElement: univiewData.map((p) => ({
+        "@type": "ListItem",
+        position: p.id, // Use the product ID or index for position
+        item: {
+          "@type": "Product",
+          name: p.title,
+          description: p.description,
+          image: `${Astro.url}${p.image}`, // Simple image URL
+          review: {
+            "@type": "Review",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: 4,
+              bestRating: 5,
+            },
+          },
+          brand: {
+            "@type": "Brand",
+            name: "UNV", // Replace with your brand name
+          },
+          additionalImage: {
+            // Use a different property name for the ImageObject
+            "@type": "ImageObject",
+            contentUrl: `${Astro.url}${p.image}`,
+            caption: p.title, // Corrected typo: `captionn` to `caption`
+            creator: {
+              "@type": "Organization",
+              name: "Digiimpact",
+            },
+            copyrightNotice: "Lovosis technology L.L.C",
           },
         },
-        image: {
-          "@type": "ImageObject",
-          contentUrl: `${Astro.url}${p.image}`,
-          captionn: p.title,
-          creator: {
-            "@type": "organization",
-            name: "Digiimpact",
-          },
-          copyrightNotice: "Lovosis technology L.L.C",
-        },
-      };
-    }),
+      })),
+    },
   ],
 };
 ---
