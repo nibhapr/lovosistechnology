@@ -27,6 +27,7 @@ export const cameraData = [
 export const univiewData = [
   {
     id: 1,
+    author: "Gafoor.TC",
     title: "IPC6622SR-X25-VF",
     description:
       "High quality image with 2MP,1/2.8’’ CMOS sensor,1920*1080@60fps in the main stream,Ultra 265, H.265, H.264, MJPEG,33X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring, suitable for different statistical scenarios,Lighthunter technology ensures ultra-high image quality in low illumination environment",
@@ -34,6 +35,7 @@ export const univiewData = [
   },
   {
     id: 2,
+    author: "Shihabb.p",
     title: "IPC6658SR-X25-VF",
     description:
       "High quality image with 8MP,1/1.8’’ CMOS sensor,3840*2160@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
@@ -41,6 +43,7 @@ export const univiewData = [
   },
   {
     id: 3,
+    author: "Roshan Aqther",
     title: "IPC6315LFW-AX5C-VG1",
     description:
       "High quality image with 5MP, 1/2.8, CMOS sensorUltra 265, H.265, H.264, MJPEG,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,LightHunter technology ensures ultra-high image quality in low illumination environment,Up to 120 dB WDR (Wide Dynamic Range)",
@@ -48,6 +51,7 @@ export const univiewData = [
   },
   {
     id: 4,
+    author: "Zameel",
     title: "IPC6424SR-X25-VF-B",
     description:
       "High quality image with 4MP,1/2.8’’ CMOS sensor,2688*1520@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
