@@ -1,6 +1,5 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { SITE } from "@data/constants";
 import { unvdisplaydata } from "../data/camera";
 const pageTitle: string = "UNV Smart Interactive Display";
 interface Props {
@@ -67,18 +66,35 @@ const structuredData = {
         },
       ],
     },
-    unvdisplaydata.map((p) => {
-      return {
-        "@type": "ImageObject",
-        contentUrl: Astro.url + p.image,
-        creditText: p.title,
-        creator: {
-          "@type": "Person",
-          name: "Digiimpact",
+    {
+      "@type": "ItemList",
+      itemListElement: unvdisplaydata.map((p) => ({
+        "@type": "ListItem",
+        position: p.id,
+        item: {
+          "@type": "Product",
+          name: p.title,
+          description: p.description,
+          image: `${Astro.url}${p.image}`,
+          review: {
+            "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: p.author,
+            },
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: 4,
+              bestRating: 5,
+            },
+          },
+          brand: {
+            "@type": "Brand",
+            name: "UNV",
+          },
         },
-        copyrightNotice: "Digiimpact",
-      };
-    }),
+      })),
+    },
   ],
 };
 ---

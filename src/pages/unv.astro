@@ -1,17 +1,13 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import { unvData } from "../data/camera";
-import { LovosisData } from "../data/camera";
-import { univiewData } from "../data/camera";
+import { LovosisData, univiewData } from "../data/camera";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 const pageTitle: string =
   "UNV Cameras & CCTV Solutions in Dubai | Lovosis Technology";
 const description =
   "Get top-quality UNV CCTV cameras, access control & security solutions at unbeatable prices. Bulk pricing available. Contact us today";
-const abtitle: string = "Uniview Security Cameras in Dubai";
-const absubTitle: string =
-  "Discover Lovosis, Dubai's authorized supplier of premium UNV surveillance solutions.";
 interface Props {
   title: string;
   subTitle?: string;
@@ -25,7 +21,7 @@ const structuredData = {
       name: "Lovosis Technology L.L.C",
       url: "https://lovosis.com",
       logo: "https://lovosis.com/pictures/logo.png",
-      description: "Your organization description here", // Replace with actual description
+      description: "Your organization description here",
       sameAs: [
         "https://www.facebook.com/p/LOVOSIS-TECHNOLOGY-100083060600975/",
         "https://www.instagram.com/_lovosis_group_of_companies_/reels/",
@@ -46,7 +42,7 @@ const structuredData = {
       "@type": "WebPage",
       name: "UNV | Lovosis Technology",
       url: "https://lovosis.com/unv",
-      description: "Your webpage description here", // Replace with actual description
+      description: "Your webpage description here",
     },
     {
       "@type": "BreadcrumbList",
@@ -74,12 +70,12 @@ const structuredData = {
       "@type": "ItemList",
       itemListElement: univiewData.map((p) => ({
         "@type": "ListItem",
-        position: p.id, // Use the product ID or index for position
+        position: p.id,
         item: {
           "@type": "Product",
           name: p.title,
           description: p.description,
-          image: `${Astro.url}${p.image}`, // Simple image URL
+          image: `${Astro.url}${p.image}`,
           review: {
             "@type": "Review",
             author: {
@@ -95,16 +91,6 @@ const structuredData = {
           brand: {
             "@type": "Brand",
             name: "UNV",
-          },
-          additionalImage: {
-            "@type": "ImageObject",
-            contentUrl: `${Astro.url}${p.image}`,
-            caption: p.title,
-            creator: {
-              "@type": "Organization",
-              name: "Digiimpact",
-            },
-            copyrightNotice: "Lovosis technology L.L.C",
           },
         },
       })),
