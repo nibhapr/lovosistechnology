@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && node process-html.mjs",
+    "build": "astro check",
+    "buildprod": "node process-html.mjs && node src/scripts/build-and-index.js",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -35,6 +36,7 @@
     "astro-seo": "^0.8.4",
     "clipboard": "^2.0.11",
     "globby": "^14.0.2",
+    "googleapis": "^144.0.0",
     "gsap": "^3.12.7",
     "html-minifier-terser": "^7.2.0",
     "lenis": "^1.1.20",
