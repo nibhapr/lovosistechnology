@@ -2,7 +2,9 @@ import { google } from 'googleapis';
 import { execSync } from 'child_process';
 import { createRequire } from 'module';
 
-const serviceAccountKey = require('../data/service-account-key.json');
+
+const serviceAccountKey = await import('../data/service-account-key.json', { assert: { type: 'json' } });
+// const serviceAccountKey = require('../data/service-account-key.json');
 const authClient = new google.auth.JWT({
   email: serviceAccountKey.client_email,
   key: serviceAccountKey.private_key,

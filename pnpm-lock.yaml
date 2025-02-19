@@ -38,9 +38,6 @@ importers:
       '@builder.io/partytown':
         specifier: ^0.10.3
         version: 0.10.3
-      '@digi4care/astro-google-tagmanager':
-        specifier: ^1.4.0
-        version: 1.4.0(astro@5.1.10(jiti@1.21.7)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))
       '@preline/accordion':
         specifier: ^2.5.2
         version: 2.6.0
@@ -325,11 +322,6 @@ packages:
   '@ctrl/tinycolor@4.1.0':
     resolution: {integrity: sha512-WyOx8cJQ+FQus4Mm4uPIZA64gbk3Wxh0so5Lcii0aJifqwoVOlfFtorjLE0Hen4OYyHZMXDWqMmaQemBhgxFRQ==}
     engines: {node: '>=14'}
-
-  '@digi4care/astro-google-tagmanager@1.4.0':
-    resolution: {integrity: sha512-z+G54j9CHf33xh1E1zNYMUlcajMy4C0HS7QrZloXN/cfEwFJayQEnoRmji+u3KfxlaHLPXvv6z6v7yfLXcCPXQ==}
-    peerDependencies:
-      astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -3726,10 +3718,6 @@ snapshots:
   '@canvas/image-data@1.0.0': {}
 
   '@ctrl/tinycolor@4.1.0': {}
-
-  '@digi4care/astro-google-tagmanager@1.4.0(astro@5.1.10(jiti@1.21.7)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))':
-    dependencies:
-      astro: 5.1.10(jiti@1.21.7)(rollup@4.32.1)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
