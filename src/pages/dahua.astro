@@ -14,7 +14,7 @@ const title: string =
   "Lovosis Technology L.L.C – Authorized Dahua CCTV Distributor in the UAE";
 const description: string =
   "Looking for the best deals on Dahua cameras? We are a trusted wholesale distributor of Dahua CCTV cameras, offering advanced security solutions at unbeatable prices. Explore our bulk pricing options for commercial, residential, and industrial needs. Contact us for a quote today!";
-  const structuredData = {
+const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -48,12 +48,13 @@ const description: string =
     {
       "@type": "VideoObject",
       name: "Lovosis Technology L.L.C | Grand opening new showroom",
-      description: "Lovosis Technology LLC has officially opened a brand-new showroom exclusively featuring Dahua products",
+      description:
+        "Lovosis Technology LLC has officially opened a brand-new showroom exclusively featuring Dahua products",
       thumbnailUrl: [
         "https://lovosis.com/pictures/lovosis1x1.png",
         "https://lovosis.com/pictures/lovosis16x9.png",
-        "https://lovosis.com/pictures/lovosis4x3.png"
-       ],
+        "https://lovosis.com/pictures/lovosis4x3.png",
+      ],
       uploadDate: "2024-05-12T08:00:00+08:00",
       duration: "PT42S",
       contentUrl: "https://www.youtube.com/watch?v=obweq6yMfBE",
@@ -61,10 +62,30 @@ const description: string =
       interactionStatistic: {
         "@type": "InteractionCounter",
         interactionType: { "@type": "WatchAction" },
-        userInteractionCount: 34
+        userInteractionCount: 34,
       },
-     
-    
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lovosis.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@id": "https://lovosis.com",
+            name: "Home",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@id": "https://lovosis.com/dahua",
+            name: "Dahua",
+          },
+        },
+      ],
     },
     dahuaData.map((p) => {
       return {
@@ -158,7 +179,6 @@ const description: string =
       opacity: 1;
       transform: translateY(0);
     }
-   
   }
   .video-container {
     position: relative;
@@ -190,12 +210,23 @@ const description: string =
         />
       </div>
 
-      <div class="fadeInRight order-1 lg:order-2 mt-16">
+      <div class="fadeInRight order-1 mt-16 lg:order-2">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-200">
-          Lovosis Technology L.L.C – Authorized Dahua CCTV Distributor in the UAE
+          Lovosis Technology L.L.C – Authorized Dahua CCTV Distributor in the
+          UAE
         </h1>
         <p class="text-md mt-4 dark:text-gray-300">
-          Welcome to <strong>Lovosis Technology L.L.C</strong>, the authorized <strong>Dahua CCTV camera</strong> distributor in the UAE. As a proud Dahua wholesale dealer and a <strong>Diamond Partner with Zhejiang Dahua Technology</strong>, we bring the best in cutting-edge security solutions to Dubai, the UAE, and beyond. Whether you are looking for a <strong>Dahua camera</strong>, <strong>Dahua IP camera</strong>, or <strong>Dahua NVR systems</strong>, we provide top-quality products at competitive prices for businesses and residential needs.
+          Welcome to <strong>Lovosis Technology L.L.C</strong>, the authorized <strong
+            >Dahua CCTV camera</strong
+          > distributor in the UAE. As a proud Dahua wholesale dealer and a <strong
+            >Diamond Partner with Zhejiang Dahua Technology</strong
+          >, we bring the best in cutting-edge security solutions to Dubai, the
+          UAE, and beyond. Whether you are looking for a <strong
+            >Dahua camera</strong
+          >, <strong>Dahua IP camera</strong>, or <strong
+            >Dahua NVR systems</strong
+          >, we provide top-quality products at competitive prices for
+          businesses and residential needs.
         </p>
         <div class="mt-8 grid w-full sm:inline-flex">
           <PrimaryCTA
@@ -210,10 +241,15 @@ const description: string =
       <h2
         class="animate-fade-in-left text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-4xl md:leading-tight"
       >
-      Your Trusted Dahua CCTV Partner in Dubai, U.A.E
+        Your Trusted Dahua CCTV Partner in Dubai, U.A.E
       </h2>
       <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
-        As the diamond <strong>Dahua CCTV distributor in Dubai</strong>, we offer a wide range of Dahua cameras that cater to various security requirements. Whether you're protecting a small retail shop or securing an entire corporate campus, our <strong>Dahua CCTV camera</strong> systems provide reliable, high-definition surveillance with advanced features that keep you connected to your property 24/7.
+        As the diamond <strong>Dahua CCTV distributor in Dubai</strong>, we
+        offer a wide range of Dahua cameras that cater to various security
+        requirements. Whether you're protecting a small retail shop or securing
+        an entire corporate campus, our <strong>Dahua CCTV camera</strong> systems
+        provide reliable, high-definition surveillance with advanced features that
+        keep you connected to your property 24/7.
       </p>
     </div>
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -254,32 +290,36 @@ const description: string =
       <h2
         class="animate-fade-in-left text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 md:text-4xl md:leading-tight"
       >
-      Why Choose Dahua CCTV Cameras?
-
+        Why Choose Dahua CCTV Cameras?
       </h2>
       <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-200">
-        Dahua Technology is a global leader in the security camera industry, recognized for its innovative and high-performance Dahua CCTV solutions. At Lovosis Technology L.L.C, we offer the full range of Dahua CCTV cameras including Dahua IP cameras, Dahua WiFi cameras, and more. With Dahua cameras, you can ensure the highest level of protection and peace of mind for your property.
+        Dahua Technology is a global leader in the security camera industry,
+        recognized for its innovative and high-performance Dahua CCTV solutions.
+        At Lovosis Technology L.L.C, we offer the full range of Dahua CCTV
+        cameras including Dahua IP cameras, Dahua WiFi cameras, and more. With
+        Dahua cameras, you can ensure the highest level of protection and peace
+        of mind for your property.
       </p>
     </div>
     <div
-    class="grid w-full grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:p-12 lg:grid-cols-3 xl:grid-cols-3"
-  >
-    {
-      dahuaData.map((item) => (
-        <div class="rounded-xl bg-gray-100 p-6">
-          <p class="items-center text-center text-4xl">
-            <img src={item.image} />
-          </p>
+      class="grid w-full grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:p-12 lg:grid-cols-3 xl:grid-cols-3"
+    >
+      {
+        dahuaData.map((item) => (
+          <div class="rounded-xl bg-gray-100 p-6">
+            <p class="items-center text-center text-4xl">
+              <img src={item.image} />
+            </p>
 
-          <h2 class="mt-2 text-left text-lg font-semibold text-gray-800">
-            {item.title}
-          </h2>
+            <h2 class="mt-2 text-left text-lg font-semibold text-gray-800">
+              {item.title}
+            </h2>
 
-          <p class="mt-2 text-left text-gray-800">{item.description}</p>
-        </div>
-      ))
-    }
-  </div>
+            <p class="mt-2 text-left text-gray-800">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-1">
       <div class="-mx-4 flex flex-wrap gap-3 md:gap-0">
         <div class="w-full px-2">
@@ -381,13 +421,12 @@ const description: string =
     </div>
     <div class="video-container mt-8">
       <iframe
-      src="https://www.youtube.com/embed/obweq6yMfBE?si=FcjBP1Qdf12teo1Q"
-      title="Dahua Diamond Partner Agreement 2025"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      style="border: 0;"></iframe>
+        src="https://www.youtube.com/embed/obweq6yMfBE?si=FcjBP1Qdf12teo1Q"
+        title="Dahua Diamond Partner Agreement 2025"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="border: 0;"></iframe>
     </div>
-    
 
     <!-- <div class="fadeInUps mb-5 mt-32 rounded-2xl text-center">
       <h2

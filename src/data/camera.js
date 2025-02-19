@@ -26,24 +26,32 @@ export const cameraData = [
 ];
 export const univiewData = [
   {
+    id: 1,
+    author: "Gafoor.TC",
     title: "IPC6622SR-X25-VF",
     description:
       "High quality image with 2MP,1/2.8’’ CMOS sensor,1920*1080@60fps in the main stream,Ultra 265, H.265, H.264, MJPEG,33X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring, suitable for different statistical scenarios,Lighthunter technology ensures ultra-high image quality in low illumination environment",
     image: "/pictures/unv/unv1.png",
   },
   {
+    id: 2,
+    author: "Shihabb.p",
     title: "IPC6658SR-X25-VF",
     description:
       "High quality image with 8MP,1/1.8’’ CMOS sensor,3840*2160@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
     image: "/pictures/unv/unv2.png",
   },
   {
+    id: 3,
+    author: "Roshan Aqther",
     title: "IPC6315LFW-AX5C-VG1",
     description:
       "High quality image with 5MP, 1/2.8, CMOS sensorUltra 265, H.265, H.264, MJPEG,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,LightHunter technology ensures ultra-high image quality in low illumination environment,Up to 120 dB WDR (Wide Dynamic Range)",
     image: "/pictures/unv/unv3.png",
   },
   {
+    id: 4,
+    author: "Zameel",
     title: "IPC6424SR-X25-VF-B",
     description:
       "High quality image with 4MP,1/2.8’’ CMOS sensor,2688*1520@30fps in the main stream,Ultra 265, H.265, H.264, MJPEG,25X Optical Zoom,Smart intrusion prevention, support false alarm filtering, include Cross Line, Intrusion, Enter Area, Leave Area detection,People Counting, support people flow counting and crowd density monitoring",
@@ -109,29 +117,30 @@ export const dahuaData = [
       "At Lovosis Technology L.L.C, we believe in providing affordable, high-quality Dahua cameras to meet the diverse needs of our customers. Whether you’re looking for a budget-friendly Dahua camera or a premium Dahua CCTV system, we offer competitive Dahua camera prices in the UAE, ensuring that you get the best value for your investment in security.",
     image: "/pictures/icons/icon6.png",
   },
-
- 
 ];
 export const unvdisplaydata = [
   {
+    id: 1,
     title: "MW7880-FO-D",
     description:
       "Energy saving voltage division design and high conversion efficiency power supply reduce the power consumption of the whole device by 30%.High refresh rate, high brightness, wide viewing angle, no glare, and low attenuation offer better visual experience.High grayscale image delivers more details.Supports 360°arc splicing screen for naked-eye 3D display effect.Aluminum alloy cabinet, each only weights 24.5kg.",
     image: "/pictures/unv/MW7857-FO-D.jpg",
+    author: "Mural Krishna",
   },
   {
+    id: 2,
     title: "MW78XX-FI",
     description:
       "Industrial-grade panel, highly reliable integrated structure design, continuous stable operation.Direct-lit LED backlight provides high brightness uniformity without border shadows.Ultra-narrow 1.7 mm seam.Supports white balance adjustment, delivering delicate and colorful images.Wide 178 viewing angles.Built-in image splicing function.Support anti-burn technology, landscape and portrait installation.Supports delayed boot after power on.Advanced direct-lit local dimming technology with low power consumption, saving energy",
     image: "/pictures/unv/lcdw.png",
+    author: "Thomas",
   },
   {
+    id: 3,
     title: "MW7818-FI-EB",
     description:
       "Advanced grayscale gives detailed and realistic images.Seamlessly splices images without black lines on the screen.Simple and stylish appearance, easy to install.High brightness and contrast provide optimal imagesTakes up less space with a slim and compact design.Long lifetime.Low heat, excellent heat dissipation, no noise.Low failure rate and maintenance cost.Ultra-wide viewing angle ensures satisfactory viewing experience from diversified angles.High refresh rate and frame frequency provide high image quality without ghosting or smearing",
     image: "/pictures/unv/MW7818-FI-EB.jpg",
+    author: "Sanam Rehman",
   },
-
 ];
-
-

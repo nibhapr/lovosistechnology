@@ -1,8 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { SITE } from "@data/constants";
 import { unvdisplaydata } from "../data/camera";
-const pageTitle: string = `UniArch Security Cameras | ${SITE.Title + " - " + "Professional Surveillance Solutions In Dubai, United Arab Emirates"}`;
+const pageTitle: string = "UNV Smart Interactive Display";
 interface Props {
   title: string;
   subTitle?: string;
@@ -45,18 +44,57 @@ const structuredData = {
       url: "https://lovosis.com/unvdisplay",
       description: description,
     },
-    unvdisplaydata.map((p) => {
-      return {
-        "@type": "ImageObject",
-        contentUrl: Astro.url + p.image,
-        creditText: p.title,
-        creator: {
-          "@type": "Person",
-          name: "Digiimpact",
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lovosis.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@id": "https://lovosis.com",
+            name: "Home",
+          },
         },
-        copyrightNotice: "Digiimpact",
-      };
-    }),
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@id": "https://lovosis.com/unvdisplay",
+            name: "Unv Display",
+          },
+        },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      itemListElement: unvdisplaydata.map((p) => ({
+        "@type": "ListItem",
+        position: p.id,
+        item: {
+          "@type": "Product",
+          name: p.title,
+          description: p.description,
+          image: `${Astro.url}${p.image}`,
+          review: {
+            "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: p.author,
+            },
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: 4,
+              bestRating: 5,
+            },
+          },
+          brand: {
+            "@type": "Brand",
+            name: "UNV",
+          },
+        },
+      })),
+    },
   ],
 };
 ---
@@ -108,7 +146,7 @@ const structuredData = {
   }
 </style>
 
-<MainLayout title={pageTitle} sd={structuredData}>
+<MainLayout title={pageTitle} sd={structuredData} description={description}>
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
@@ -131,8 +169,8 @@ const structuredData = {
           ,
           alt="interactive display"
           class="h-full w-full object-contain"
-         />
-<p class ="text-center mt-4 text-2xl font-bold">MW3575-U-CE</p>
+        />
+        <p class="mt-4 text-center text-2xl font-bold">MW3575-U-CE</p>
       </div>
       <div class="bg-white shadow-xl">
         <img
@@ -141,7 +179,7 @@ const structuredData = {
           alt="interactive panel"
           class="h-full w-full object-contain"
         />
-        <p class ="text-center mt-4 text-2xl font-bold">MW3575-U-CE</p>
+        <p class="mt-4 text-center text-2xl font-bold">MW3575-U-CE</p>
       </div>
       <div class="bg-gray-100 shadow-xl">
         <img
@@ -150,7 +188,7 @@ const structuredData = {
           alt="Lcd walls"
           class="h-full w-full object-contain"
         />
-        <p class ="text-center mt-4 text-2xl font-bold">MW3575-U-CE</p>
+        <p class="mt-4 text-center text-2xl font-bold">MW3575-U-CE</p>
       </div>
       <div class="bg-white shadow-xl">
         <img
@@ -159,16 +197,21 @@ const structuredData = {
           alt="Led display"
           class="h-full w-full object-contain"
         />
-        <p class ="text-center mt-4 text-2xl font-bold">MW3575-U-CE</p>
+        <p class="mt-4 text-center text-2xl font-bold">MW3575-U-CE</p>
       </div>
     </div>
     <div class="mb-5 mt-32 rounded-2xl text-center">
       <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
-        Lovosis Technology LLC, Dubai, is the authorized distributor of UNV Smart Interactive Panels
+        Lovosis Technology LLC, Dubai, is the authorized distributor of UNV
+        Smart Interactive Panels
       </h2>
     </div>
     <div class="mx-auto max-w-7xl dark:text-gray-200">
-    <strong>UNV Smart Interactive Panels</strong> are designed to transform the way you teach, learn, and collaborate. With advanced features like ultra-responsive touch screen technology, crystal-clear interactive display, and seamless integration with modern teaching tools,<strong>UNV panels</strong>  are the ultimate solution for educators and professionals alike.
+      <strong>UNV Smart Interactive Panels</strong> are designed to transform the
+      way you teach, learn, and collaborate. With advanced features like ultra-responsive
+      touch screen technology, crystal-clear interactive display, and seamless integration
+      with modern teaching tools,<strong>UNV panels</strong> are the ultimate solution
+      for educators and professionals alike.
     </div>
     <div class="mb-5 mt-16 rounded-2xl text-center">
       <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
@@ -178,62 +221,71 @@ const structuredData = {
     <div class="mx-auto max-w-7xl dark:text-gray-200">
       <strong>1: High-Resolution Interactive Display:</strong>
       <li>
-        Enjoy stunning visuals with 4K UHD resolution, perfect for engaging students or presenting detailed data
+        Enjoy stunning visuals with 4K UHD resolution, perfect for engaging
+        students or presenting detailed data
       </li>
       <strong>2: Multi-Touch Capability</strong>
       <li>
         Up to 20-point touch support for seamless collaboration and interaction.
       </li>
       <strong>3: Built-In Android and Windows Compatibility</strong>
-      <li>
-        Easily switch between platforms for maximum flexibility.
-      </li>
+      <li>Easily switch between platforms for maximum flexibility.</li>
       <strong>Long-Lasting Durability</strong>
-      <li>Designed for heavy daily use, ensuring reliability for years to come</li>
+      <li>
+        Designed for heavy daily use, ensuring reliability for years to come
+      </li>
       <strong>Easy-to-Use Interface</strong>
-      <li>Intuitive controls make it simple for teachers and presenters to get started.</li>
+      <li>
+        Intuitive controls make it simple for teachers and presenters to get
+        started.
+      </li>
     </div>
     <div class="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-1">
-        <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
-          <div class="mb-5 mt-16 rounded-2xl text-center">
-            Latest Products from Lovosis Technology
-          </div>
-        </h2>
-        <ul id="cards" class="grid list-none grid-cols-1 grid-rows-4 gap-4">
-          {
-            unvdisplaydata.map((item) => (
-              <li class="card sticky top-32 cursor-pointer rounded-lg bg-white pt-4 shadow-xl transition-all duration-300 dark:bg-neutral-600">
-                <div class="card__content relative grid grid-cols-1 gap-1 rounded-lg p-5 text-left md:grid-cols-2">
-                  <div>
-                    <h2 class="text-4xl font-light dark:text-neutral-200">
-                      {item.title}
-                    </h2>
-                    <p class="text-base font-light leading-normal dark:text-neutral-300">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div class="self-end">
-                    <figure class="h-64 overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        class="h-full w-full object-contain"
-                      />
-                    </figure>
-                  </div>
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
+        <div class="mb-5 mt-16 rounded-2xl text-center">
+          Latest Products from Lovosis Technology
+        </div>
+      </h2>
+      <ul id="cards" class="grid list-none grid-cols-1 grid-rows-4 gap-4">
+        {
+          unvdisplaydata.map((item) => (
+            <li class="card sticky top-32 cursor-pointer rounded-lg bg-white pt-4 shadow-xl transition-all duration-300 dark:bg-neutral-600">
+              <div class="card__content relative grid grid-cols-1 gap-1 rounded-lg p-5 text-left md:grid-cols-2">
+                <div>
+                  <h2 class="text-4xl font-light dark:text-neutral-200">
+                    {item.title}
+                  </h2>
+                  <p class="text-base font-light leading-normal dark:text-neutral-300">
+                    {item.description}
+                  </p>
                 </div>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+                <div class="self-end">
+                  <figure class="h-64 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      class="h-full w-full object-contain"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
     <div class="mb-5 mt-16 rounded-2xl text-center">
       <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
         Why Lovosis Technology LLC?
       </h2>
     </div>
     <div class="mx-auto max-w-7xl dark:text-gray-200">
-        As the <strong>authorized distributor of UNV Smart Interactive Panels in Dubai</strong>, we pride ourselves on delivering top-quality products and exceptional customer service. Our team of experts is here to help you choose the right solution for your needs and provide ongoing support to ensure your satisfaction
+      As the <strong
+        >authorized distributor of UNV Smart Interactive Panels in Dubai</strong
+      >, we pride ourselves on delivering top-quality products and exceptional
+      customer service. Our team of experts is here to help you choose the right
+      solution for your needs and provide ongoing support to ensure your
+      satisfaction
     </div>
     <div class="mb-5 mt-16 rounded-2xl text-center">
       <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">
@@ -241,8 +293,13 @@ const structuredData = {
       </h2>
     </div>
     <div class="mx-auto max-w-7xl dark:text-gray-200">
-        <p>Ready to take your teaching or presentations to the next level? Explore our range of interactive panels, smart boards, and LCD video walls today. Contact Lovosis Technology LLC for more information or to request a demo.</p>
-     
+      <p>
+        Ready to take your teaching or presentations to the next level? Explore
+        our range of interactive panels, smart boards, and LCD video walls
+        today. Contact Lovosis Technology LLC for more information or to request
+        a demo.
+      </p>
+
       <div
         class="mb-20 mt-8 rounded-2xl bg-gray-100 p-5 text-center dark:bg-neutral-500 md:p-12"
       >
