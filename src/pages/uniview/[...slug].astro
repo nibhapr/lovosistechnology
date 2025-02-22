@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import MainLayout from "@/layouts/MainLayout.astro";
+import Card from "@/components/sections/Card.astro";
 
 
 export async function getStaticPaths() {
@@ -12,10 +13,45 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const {id, title, desc, img, alt, features } = entry.data;
+const {id, title, desc, img, alt,author,reviewBody,ratingValue,features,publishedTime } = entry.data;
+const imageUrl = img.src
+const structuredData = {
+ 
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": title,
+  "image": `${Astro.url.origin}/${imageUrl}`,
+  "description": desc,
+  "brand": {
+    "@type": "Brand",
+    "name": "UNV"
+  },
+  "sku": "UNV-4K-123",
+  "mpn": "123456",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "50"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": author,
+      "datePublished": publishedTime,
+      "reviewBody": reviewBody,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": ratingValue,
+        "bestRating": "5"
+      }
+    },
+    
+  ]
+}
+
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} sd={structuredData}>
   <main class="container mx-auto px-4 py-8">
 
     <section class="hero-section relative mb-8 overflow-hidden">

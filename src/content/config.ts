@@ -127,6 +127,9 @@ const univiewCollection = defineCollection({
       desc: z.string(), 
       img: image(),
       alt: z.string(),
+      author:z.string(),
+      reviewBody:z.string(),
+      ratingValue:z.number(),
       publishedTime: z.string(), 
       modifiedTime: z.string().optional(), 
       features: z.array(z.string()).optional()

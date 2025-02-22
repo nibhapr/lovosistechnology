@@ -9,8 +9,12 @@ interface Card {
   desc: string;
   img: string;
   alt: string;
+  author: string;
+  reviewBody:string;
+  ratingValue:number;
   slug: string;
   features?: string[];
+  publishedTime: string;
 }
 
 const content = await getCollection("uniview");
@@ -20,8 +24,12 @@ const cards: Card[] = content.map((item) => ({
   desc: item.data.desc,
   img: item.data.img.src,
   alt: item.data.alt,
+  author: item.data.author,
+  reviewBody: item.data.reviewBody,
+  ratingValue: item.data.ratingValue,
   slug: item.slug,
   features: item.data.features,
+  publishedTime: item.data.publishedTime
 }));
 
 const pageTitle: string =

@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "buildprod":"node process-html.mjs && node/src/scripts/build-and-index.js",
+    "buildprod": "node process-html.mjs && node src/scripts/build-and-index.js",
     "preview": "astro preview",
     "astro": "astro"
   },
