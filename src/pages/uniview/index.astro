@@ -86,7 +86,7 @@ const structuredData = {
           "item": {
             "@type": "Product",
             "name": card.title,
-            "image": card.img,
+            "image": `${Astro.url.origin}/uniview/${card.img}`,
             "description": card.desc,
             "brand": {
               "@type": "Brand",
