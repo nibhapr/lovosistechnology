@@ -78,26 +78,33 @@ export const LovosisData = [
     image: "/pictures/icons/sales.png",
   },
 ];
-export const unvData = [
-  {
-    title: "Superior Video Quality:",
-    description:
-      "UNV cameras provide crystal-clear 4K resolution, ensuring every detail is captured.",
-    image: "/pictures/icons/icon45.png",
-  },
-  {
-    title: "Advanced AI Technology",
-    description:
-      "UNV CCTV systems are equipped with AI-powered features like facial recognition, motion detection, and intrusion alerts",
-    image: "/pictures/icons/icon7.png",
-  },
-  {
-    title: "Competitive UNV CCTV Camera Prices",
-    description:
-      "With our established network and bulk purchasing power, we offer the best UNV CCTV camera prices in the Middle East, providing you with unbeatable value.",
-    image: "/pictures/icons/icon6.png",
-  },
-];
+
+  export const unvData = [
+    {
+      title: "Superior Video Quality:",
+      description:
+        "UNV cameras provide crystal-clear 4K resolution, ensuring every detail is captured.",
+      image: "/pictures/unv/video.jpg",
+    },
+    {
+      title: "Advanced AI Technology",
+      description:
+        "UNV CCTV systems are equipped with AI-powered features like facial recognition, motion detection, and intrusion alerts",
+      image: "/pictures/unv/advanced.jpg",
+    },
+    {
+      title: "Competitive UNV Camera Prices",
+      description:
+        "With our established network and bulk purchasing power, we offer the best UNV CCTV camera prices in the Middle East, providing you with unbeatable value.",
+      image: "/pictures/unv/prices.png",
+    },
+    {
+      title: "After-Sales Service and Warranty",
+      description:
+        "Customer satisfaction is a top priority for Lovosis Technology. They offer comprehensive after-sales services, including maintenance, repairs, and software updates.",
+      image: "/pictures/unv/sales.png",
+    },
+  ];
 export const dahuaData = [
   {
     title: "High-Quality Dahua IP Cameras",

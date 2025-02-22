@@ -118,11 +118,25 @@ const eventCollection = defineCollection({
     }),
 });
 
-
+const univiewCollection = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      id: z.number(),
+      title: z.string(),
+      desc: z.string(), 
+      img: image(),
+      alt: z.string(),
+      publishedTime: z.string(), 
+      modifiedTime: z.string().optional(), 
+      features: z.array(z.string()).optional()
+    }),
+});
 
 export const collections = {
   docs: defineCollection({ schema: docsSchema() }),
   products: productsCollection,
   blog: blogCollection,
   event: eventCollection,
+  uniview: univiewCollection
 };
