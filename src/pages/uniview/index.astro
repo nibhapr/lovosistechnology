@@ -23,6 +23,7 @@ const cards: Card[] = content.map((item) => ({
   slug: item.slug,
   features: item.data.features,
 }));
+
 const pageTitle: string =
   "UNV Cameras & CCTV Solutions in Dubai | Lovosis Technology";
 const description =
@@ -82,11 +83,13 @@ const structuredData = {
       "itemListElement": cards.map((card) => {
         return {
           "@type": "ListItem",
+          
           "position": card.id,
           "item": {
             "@type": "Product",
             "name": card.title,
             "image": `${Astro.url.origin}/${card.img}`,
+          
             "description": card.desc,
             "brand": {
               "@type": "Brand",
