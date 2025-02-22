@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
-    "buildprod": "node process-html.mjs && node src/scripts/build-and-index.js",
+    "build": "astro check",
+    "buildprod": "node src/scripts/build-and-index.js && node process-html.mjs && astro build " ,
     "preview": "astro preview",
     "astro": "astro"
   },
