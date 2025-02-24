@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 import partytown from '@astrojs/partytown';
 import mdx from '@astrojs/mdx';
 import astroExpressiveCode from 'astro-expressive-code';
+import robotsTxt from 'astro-robots-txt';
 
 export default defineConfig({
   site: "https://lovosis.com/",
@@ -16,6 +17,29 @@ export default defineConfig({
     tailwind(),
     partytown(),
     astroExpressiveCode(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: 'Googlebot',
+          allow: '/',
+          disallow: ['/search'],
+          crawlDelay: 2,
+        },
+        {
+          userAgent: 'OtherBot',
+          allow: ['/allow-for-all-bots', '/allow-only-for-other-bot'],
+          disallow: ['/admin', '/login'],
+          crawlDelay: 2,
+        },
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: '/search',
+          crawlDelay: 10,
+          cleanParam: 'ref /articles/',
+        },
+      ],
+    }),
     mdx(),
        sitemap({
       i18n: {
