@@ -193,12 +193,12 @@ const structuredData = {
         >
         Why Choose UNV Camera for Home Security? 
         </h3>
-       <li class="p-2 mt-4"> Advanced Motion Detection and Analytics</li>
-       <li class="p-2"> Superior Image Quality</li>
-       <li class="p-2"> Seamless Integration</li>
-       <li class="p-2"> Remote Access and Monitoring</li>
-       <li class="p-2">  Cost-Effective Security</li>
-       <li class="p-2">  Durability and Reliability</li>
+       <li class="p-2 mt-4 dark:text-gray-200"> Advanced Motion Detection and Analytics</li>
+       <li class="p-2 dark:text-gray-200"> Superior Image Quality</li>
+       <li class="p-2 dark:text-gray-200"> Seamless Integration</li>
+       <li class="p-2 dark:text-gray-200"> Remote Access and Monitoring</li>
+       <li class="p-2 dark:text-gray-200">  Cost-Effective Security</li>
+       <li class="p-2 dark:text-gray-200">  Durability and Reliability</li>
         <div class="mt-8 grid w-full sm:inline-flex">
           <PrimaryCTA title="Contact Us" url="https://lovosis.com/contact/" />
         </div>
@@ -248,7 +248,7 @@ const structuredData = {
                 <img
                   src={card.img}
                   alt={card.alt}
-                  class="h-56 w-full object-cover"
+                  class="product-image h-56 w-full object-cover"
                 />
                 <div class="flex flex-col items-center p-6">
                   <h3 class="text-xl font-semibold">{card.title}</h3>
@@ -320,5 +320,17 @@ const structuredData = {
     if (noResults) {
       noResults.classList.toggle("hidden", hasVisibleCards);
     }
+  });
+</script>
+<script>
+  import gsap from "gsap";
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.to(".product-image", {
+    
+      y:10,
+      x:50,
+      stagger: 0.1
+    });
   });
 </script>

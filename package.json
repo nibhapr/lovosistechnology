@@ -1,12 +1,12 @@
 {
   "name": "lovosis",
-  "type":"module",
+  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check",
-    "buildprod": "node src/scripts/build-and-index.js && node process-html.mjs && astro build " ,
+    "buildprod": "node src/scripts/build-and-index.js && node process-html.mjs && astro build ",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -21,7 +21,7 @@
     "@astrojs/tailwind": "^5.1.5",
     "@astrojs/vercel": "^8.0.4",
     "@builder.io/partytown": "^0.10.3",
-     "@preline/accordion": "^2.5.2",
+    "@preline/accordion": "^2.5.2",
     "@preline/collapse": "^2.5.2",
     "@preline/dropdown": "^2.5.2",
     "@preline/overlay": "^2.5.2",
