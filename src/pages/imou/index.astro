@@ -18,7 +18,6 @@ interface Card {
 }
 
 const content = await getCollection("lovosis");
-
 const cards: Card[] = content.map((item:any) => ({
   id: item.data.id,
   title: item.data.title,
@@ -74,13 +73,11 @@ const structuredData = {
       "itemListElement": cards.map((card) => {
         return {
           "@type": "ListItem",
-          
           "position": card.id,
           "item": {
             "@type": "Product",
             "name": card.title,
             "image": `${Astro.url.origin}/${card.img}`,
-          
             "description": card.desc,
             "brand": {
               "@type": "Brand",
@@ -90,7 +87,7 @@ const structuredData = {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "50"
+              
             }
           }
         };
@@ -218,19 +215,12 @@ const structuredData = {
       </div>
     </div>
   </div>
-  
- 
-
-
   <div class="text-center mt-32 rounded-2xl mb-5">
     <h2 class="text-balance animate-fade-in-left text-2xl md:text-4xl md:leading-tight font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
     IMOU Product Categories
     </h2>
   </div>
-
-
-
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-8">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         cards.map((card) => (
@@ -267,10 +257,10 @@ const structuredData = {
 <div class="text-center bg-gray-100 dark:bg-neutral-500 p-5 md:p-12 rounded-2xl mb-20">
         
 
-    <div class="bg-gray-100 py-5">
+    <div class="bg-gray-100 dark:bg-neutral-500  py-5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="lg:text-center">
-              <p class=" max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              <p class=" max-w-2xl text-xl text-gray-500 dark:text-white  lg:mx-auto">
                 Get in touch with us for any inquiries, collaborations, or support. We're here to assist and answer your questions!
               </p>
           </div>
@@ -290,7 +280,7 @@ const structuredData = {
                           </div>
                       </div>
                       <div class="ml-4">
-                          <p class="mt-2 text-base text-gray-500">
+                          <p class="mt-2 text-base text-gray-500 dark:text-white">
                             Baghlaf Building Shop No.11 Satellite Market, Naif, Deira – Dubai
                           </p>
                       </div>
@@ -309,7 +299,7 @@ const structuredData = {
                           </div>
                       </div>
                       <div class="ml-4">
-                          <p class="mt-2 text-base text-gray-500">
+                          <p class="mt-2 text-base text-gray-500 dark:text-white">
                             +971 55 946 2214
                           </p>
                       </div>
@@ -328,7 +318,7 @@ const structuredData = {
                           </div>
                       </div>
                       <div class="ml-4">
-                        <p class="mt-2 text-base text-gray-500">
+                        <p class="mt-2 text-base text-gray-500 dark:text-white">
                             sales@imou-dubai.com
                           </p>
                       </div>
