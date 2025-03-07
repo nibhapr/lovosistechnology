@@ -11,23 +11,24 @@ export interface Props {
 	title: string;
 	publishedTime?: string;
 	site?: string;
-  meta?:string;
+	meta?: { name?: string; property?: string; content: string; }[];
 	sd?: object;
 	ogTitle?: string;
 	siteName?: string;
 	description?: string;
-  lang?:string;
+	lang?:string;
 	image?: {
 		url: string;
 		alt: string;
 	};
 	disableIndexing?: boolean;
+	metaTags?: Array<{ name?: string; property?: string; content: string }>;
 }
 
 const {
 	title,
-  meta,
-  lang="en",
+	meta,
+	lang="en",
 	siteName,
 	publishedTime,
 	description,
