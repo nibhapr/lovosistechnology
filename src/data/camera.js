@@ -83,25 +83,25 @@ export const LovosisData = [
     {
       title: "Superior Video Quality:",
       description:
-        "UNV cameras provide crystal-clear 4K resolution, ensuring every detail is captured.",
+        "With its pristine 4K resolution, UNV cameras make sure that every detail is recorded.",
       image: "/pictures/unv/video.jpg",
     },
     {
       title: "Advanced AI Technology",
       description:
-        "UNV CCTV systems are equipped with AI-powered features like facial recognition, motion detection, and intrusion alerts",
+        "AI-powered capabilities like motion detection, facial recognition, and intrusion alarms are included in UNV CCTV systems.",
       image: "/pictures/unv/advanced.jpg",
     },
     {
       title: "Competitive UNV Camera Prices",
       description:
-        "With our established network and bulk purchasing power, we offer the best UNV CCTV camera prices in the Middle East, providing you with unbeatable value.",
+        "We provide you with unrivaled value by offering the finest UNV CCTV camera prices in the Middle East because to our established network and bulk purchasing ability.",
       image: "/pictures/unv/prices.png",
     },
     {
       title: "After-Sales Service and Warranty",
       description:
-        "Customer satisfaction is a top priority for Lovosis Technology. They offer comprehensive after-sales services, including maintenance, repairs, and software updates.",
+        "Lovosis Technology places a high premium on client happiness. They provide extensive post-purchase services, including as upkeep, fixes, and software upgrades.",
       image: "/pictures/unv/sales.png",
     },
   ];
