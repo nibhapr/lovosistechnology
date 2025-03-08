@@ -130,4 +130,7 @@ export default defineConfig({
 
   },
   adapter: vercelStatic(),
+  // content: {
+  //   collections: ['westerdigital']
+  // }
 });
