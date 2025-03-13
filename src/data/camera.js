@@ -151,3 +151,30 @@ export const unvdisplaydata = [
     author: "Sanam Rehman",
   },
 ];
+export const dahuanewData = [
+  {
+    title: "High-Quality Imaging & Resolution",
+    description:
+      "Dahua cameras deliver exceptional image quality with 4K resolution, ensuring that every detail is captured with clarity. This makes them perfect for monitoring expansive areas as well as small, intricate details like license plates or faces. Their cameras also incorporate low-light technologies, providing clear footage even in difficult lighting conditions. For instance, their Starlight technology significantly enhances performance in low-light environments.",
+    image: "/pictures/3.jpg",
+    
+  },
+  {
+    title: "Advanced Motion Detection & Smart Analytics",
+    description:
+      "Dahua cameras are equipped with advanced analytics features such as face detection, perimeter protection, and line crossing detection. These smart analytics help reduce false alarms and improve the overall efficiency of your surveillance system. Additionally, their cameras utilize AI-driven analytics for enhanced object classification, ensuring that you receive only the most relevant alerts.",
+    image: "/pictures/1.jpg",
+  },
+  {
+    title: "Wide Range of Camera Options",
+    description:
+      "Dahua offers a wide variety of surveillance cameras, including PTZ (Pan-Tilt-Zoom) cameras, bullet cameras, dome cameras, and fisheye cameras, each with unique features to meet different security requirements. They also provide thermal cameras, which are excellent for detecting heat signatures, making them useful in both security and industrial applications.",
+    image: "/pictures/dahua6.png",
+  },
+  {
+    title: "Easy Integration & Scalability",
+    description:
+      "Dahua cameras can seamlessly integrate with other security systems, whether it's an alarm system or access control system. Their open architecture allows for flexible deployment. Whether you need a single camera for a small business or hundreds for a large enterprise, Dahua provides scalable solutions to meet your needs.",
+    image: "/pictures/dahuacctv.png",
+  },
+];

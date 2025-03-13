@@ -210,6 +210,24 @@ const seagateCollection = defineCollection({
       features: z.array(z.string()).optional()
     }),
 });
+const dahuaCollection = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      id: z.number(),
+      title: z.string(),
+      desc: z.string(),
+      img: image(),
+      images: z.array(image()),
+      alt: z.string(),
+      author: z.string(),
+      reviewBody: z.string(),
+      ratingValue: z.number(),
+      publishedTime: z.string(),
+      modifiedTime: z.string().optional(),
+      features: z.array(z.string()).optional()
+    }),
+});
 
 export const collections = {
   docs: defineCollection({ schema: docsSchema() }),
@@ -220,5 +238,6 @@ export const collections = {
   lovosis: lovosisCollection,
   toshiba: toshibaCollection,
   westerdigital: westerdigitalCollection,
-  seagate: seagateCollection
+  seagate: seagateCollection,
+  dahua: dahuaCollection
 };

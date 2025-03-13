@@ -33,9 +33,9 @@ const cards: Card[] = content.map((item) => ({
 }));
 
 const pageTitle: string =
-  "UNV CCTV cameras in Dubai:Reasonably Priced Security Options";
+  "Trusted UNV Security Cameras Distributor in UAE | Lovosis Technology L.L.C";
 const description =
-  "Welcome toLovosis Technology L.L.C. , a top supplier of cutting-edge security systems in the Middle East and the official UNV distributor in the United Arab Emirates.";
+  "Looking for reliable UNV security cameras in the UAE? Lovosis Technology is your trusted distributor, offering top-quality surveillance solutions for all needs.";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -102,7 +102,7 @@ const structuredData = {
             "description": card.desc,
             "brand": {
               "@type": "Brand",
-              "name": "UNV"
+              "name": "Uniview"
             },
             "url": `${Astro.url.origin}/uniview/${card.slug}`,
             "aggregateRating": {
@@ -140,14 +140,12 @@ const structuredData = {
           <h1
             class="text-2xl font-bold text-neutral-800 dark:text-gray-200 md:text-4xl"
           >
-          UNV CCTV cameras in Dubai:Reasonably Priced Security Options
+          Trusted UNV Security Cameras Distributor in UAE | Lovosis Technology L.L.C
           </h1>
           <p class="mt-2 line-clamp-8 text-base/relaxed text-gray-500 dark:text-gray-400">
-            Welcome to<strong>Lovosis Technology L.L.C.</strong> , a top supplier of cutting-edge security systems in the Middle East
-             and the official <strong>UNV distributor in the United Arab Emirates</strong>. 
-             Our specialty is offering premium <strong>UNV CCTV cameras and security systems</strong>  designed to 
-             satisfy the rising need for dependable monitoring in the commercial, industrial, and residential sectors.<br>
-             Protect your property with the best surveillance technology. Contact Lovosis Technology L.L.C. today for affordable <strong>UNV CCTV cameras in the UAE</strong>
+            Welcome to Lovosis Technology L.L.C., your trusted provider of advanced security systems in the Middle East. We are the official distributor of UNV products in the United Arab Emirates. We specialize in offering high-quality UNV CCTV cameras and security solutions designed to meet the increasing need for dependable surveillance in homes, businesses, and industrial areas.
+
+            Protect your property with the best surveillance technology on the market. Contact Lovosis Technology L.L.C. today for affordable UNV CCTV cameras in the UAE!
             
           </p>
           <div class="mt-8 grid w-full sm:inline-flex">
@@ -160,7 +158,7 @@ const structuredData = {
             unvData.map((item) => (
       <article class="overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg dark:shadow-gray-700/25">
       <img
-        alt=""
+        alt={item.title}
         src= {item.image}
         class="h-56 w-full object-cover"
       />
