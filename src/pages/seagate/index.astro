@@ -32,11 +32,8 @@ const cards: Card[] = content.map((item) => ({
   publishedTime: item.data.publishedTime,
 }));
 
-
-
 const pageTitle = "Seagate Skyhawk Surveillance Hard Drive | 3 Year Warranty | UAE Distributor";
 const description = "Official Seagate Skyhawk surveillance hard drives with 3-year replacement warranty. Authorized distributor in UAE, Saudi Arabia, Dubai & Middle East. Best prices for CCTV storage.";
-
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -56,6 +53,11 @@ const structuredData = {
       areaServed: "Middle East"
     }
   },
+  aggregateRating: {
+              "@type": "AggregateRating",
+              "ratingValue": "4.5",
+              "reviewCount": "46"
+            },
   additionalProperty: [
     {
       "@type": "PropertyValue",
@@ -69,7 +71,6 @@ const structuredData = {
     }
   ]
 };
-
 const seagateContent = await getCollection("seagate");
 ---
 
