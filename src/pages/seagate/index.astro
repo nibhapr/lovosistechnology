@@ -46,6 +46,16 @@ const structuredData = {
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
+    "priceCurrency": "AED",  
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "0",           
+      "priceCurrency": "AED",  
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "Middle East"
+      }
+    },
     areaServed: ["AE", "SA", "BH", "KW", "OM", "QA"],
     seller: {
       "@type": "Organization",
